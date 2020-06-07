@@ -1,0 +1,64 @@
+.slider-header,
+.slider-header * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.slider-header {
+    padding-right: 27px;
+    text-align: center;
+    width: 100%;
+    color: #222;
+    font: normal normal normal 1rem/1.6 Nunito Sans, Helvetica, Arial, sans-serif;
+}
+#ves-verticalmenu{
+    right: 0px;
+}
+#header .header1 #ves-mainnav .navbar-toggle{
+    left: 0px;
+}
+.custom-menu-homepage .col-md-3{
+    padding-right: 0px;
+}
+.custom-menu-none-homepage .col-md-3{
+    padding-right: 15px;
+    padding-left: 0px;
+}
+.custom-menu-homepage2 .col-md-3{
+    background-color: white;
+    padding-left: 0px;
+}
+.header-link-left-custom{
+    margin-top:5px;
+}
+.custom-menu-none-homepage{
+    display: flex;
+    background-color: white;
+}
+.background-menu-homepage {
+    background-color: #F0F0F0;
+}
+@media (min-width: 992px) {
+    .custom-menu-homepage{
+        padding-top:15px;
+    }
+}
+@media (max-width: 992px) {
+    .custom-menu-homepage2{
+        padding-top: 15px;
+        display: block;
+    }
+}
+.icon-header-mobile{
+    height: 36px;
+    display: flex;
+}
+.content-childrens{
+    color: #333333;
+    font-weight: bold;
+    font-size: 15px;
+}
+.top-of-page-img {
+    height: 64px;
+}

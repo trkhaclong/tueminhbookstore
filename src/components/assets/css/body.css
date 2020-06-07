@@ -1,0 +1,337 @@
+.fhs-input-box.checked-error .fhs-input-group .fhs-textbox-alert{
+	background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_fail.png) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+}
+
+.fhs-input-box.checked-pass .fhs-input-group .fhs-textbox-alert{
+	background: url(https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_success.png) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+}
+
+.cms-icon-menu{
+    padding: 15px 0px !important;
+    }
+    
+    @media only screen and (min-width: 768px) {
+    .cms-icon-menu .col-md-3{
+    width: 10%;
+    margin: 0px;
+    padding:0px;
+    }
+    .cms-icon-menu .cms-icon-menu-item-name{
+    padding: 10px 5px;
+    }
+    }
+    
+    @media only screen and (max-width: 768px) {
+    .cms-icon-menu .col-sms-3 {
+    width: 20% !important;
+    margin: 0px;
+    padding:0px;
+    }
+    .cms-icon-menu .col-sms-3 img {
+    width: 50%;
+    }
+}
+#personalization-grid{
+    margin-top: 20px;
+    background-color: #bd3939;
+    display: none;
+}
+
+#personalization-header{
+    
+}
+
+#personalization-header-title{
+    height: 45px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#personalization-header-title a{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    line-height: 2.8em;
+}
+
+#personalization-header-menu{
+    padding: 0px 10px;
+    line-height: 2.0em;
+    text-align: center;
+}
+
+#personalization-header-menu .personalization-menu-item > a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Header Menu */
+.personalization-menu-item{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    user-select: none;
+    font-size: 14px;
+}
+
+#personalization-menu-item-more{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    user-select: none;
+    font-size: 14px;
+}
+
+#personalization-menu-item-more > a{
+    font-size: 16px;
+    color: white;
+}
+
+.personalization-menu-item hr, .personalization-menu-subitem hr{
+    margin: 5px 0px;
+    border: 1.5px solid #eee0;
+    -webkit-transition: all 0.5s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s  ease-in-out;
+    width : 20%;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.personalization-menu-item:not(.active) hr, .personalization-menu-subitem:not(.active) hr{
+    -webkit-transition: all 0.5s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s  ease-in-out;
+}
+
+.personalization-menu-item:hover hr, .personalization-menu-item.active hr
+,.personalization-menu-subitem:hover hr, .personalization-menu-subitem.active hr{
+    border: 1.5px solid #F7931E;
+    width: 100%;
+}
+
+.personalization-menu-item.active a, #personalization-header-menu .personalization-menu-item:hover a{
+    color: #F7931E;
+}
+
+#personalization-menu-item-more:hover > a, #personalization-menu-item-more.active > a{
+    color: #F7931E !important;
+}
+
+#personalization-menu-item-more-option{
+    position: absolute;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px 0px 0px 0px;
+    z-index: 99999;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-top: -15px;
+    display: none;
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+    margin-left: -15px;
+}
+
+.personalization-menu-subitem{
+    padding: 5px 10px 0px 10px;
+    color: #F7931E;
+    text-align: left;
+}
+
+.personalization-menu-subitem a{
+    font-size: 14px;
+    color: black;
+}
+
+.personalization-menu-subitem:hover{
+    background-color: #e2e2e2;
+}
+
+.personalization-menu-subitem:hover a, .personalization-menu-subitem.active a{
+    color: #F7931E !important;
+}
+
+/* Loading */
+#personalization-grid-loading{
+    padding-top: 150px;
+    text-align: center;
+    min-height: 265px;
+}
+
+#personalization-grid-container{
+    min-height: 285px;
+    background-color: #bd3939;
+    margin: 0px 10px;
+}
+
+#personalization-grid-container .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#personalization-grid-more{
+    
+}
+
+#personalization-grid-more a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #ff9800;
+    border-radius: 25px;
+    width: 250px;
+    margin: 10px auto;
+    display: block;
+}
+
+.personalization-item{
+    padding: 5px;
+    padding-left: 5px !important;
+}
+
+.swiper-personal-mobile-grid .personalization-item{
+    width: 155px; 
+}
+
+.personalization-item .item-inner:hover{
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+}
+
+.personalization-menu-mobile-item{
+    margin: 0px 5px;
+    padding: 5px;
+    text-align: center;
+    width: auto !important;
+}
+
+#personalization-menu-mobile{
+    overflow: hidden;
+    background-color: #bd3939;
+    margin: 10px 0px -10px 0px;
+}
+
+#personalization-menu-mobile a{
+    color: white;
+    font-size: 16px;
+}
+
+#personalization-recommendation-title {
+    padding: 15px;
+    line-height: 2.8em;
+    text-align: center!important;
+}
+
+#personalization-recommendation-content{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 2.8em;
+    text-align: center!important;
+    padding-bottom: 7px;
+    text-align: center!important;
+}
+
+.product-name a{
+    max-height: 40px;
+}
+.swiper-personal-mobile-grid.swiper-container-horizontal{
+    margin-left: -8px;
+}
+
+#personalization-recommendation-title a{
+    color: #ff9800;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 240px;
+    vertical-align: middle;
+    display: inline-block;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -9px black;
+}
+
+#personalization-grid-more{
+    padding-bottom: 10px;
+}
+.cms-horizontal-slider{
+    background-color: #fff;
+    margin: 20px 0px 0px 0px;
+}
+
+.cms-horizontal-slider .swiper-container{
+    padding:15px 20px
+}
+.flashsale-slidertm {
+    margin: 20px 0px 0px; 
+    padding: 0px; 
+    display: block;
+}
+
+.portfolio-item {
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+ .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 209, 54, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+  }
+ .portfolio-hover .portfolio-hover-content {
+    font-size: 1.25rem;
+    color: white;
+  }
+  .portfolio-link:hover .portfolio-hover {
+    opacity: 1;
+  }
+  .portfolio-item .portfolio-caption {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  .portfolio-item .portfolio-caption .portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+    font-style: italic;
+    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
