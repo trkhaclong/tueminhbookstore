@@ -24,7 +24,7 @@ class Login extends Component {
                                 this.props.login(this.props.values.email, this.props.values.password);
                             }} className="create-account-form" style={{display: 'block'}}>
                                     <h2 className="heading-title">
-                                        LOGIN
+                                        ĐĂNG NHẬP
                                     </h2>
                                     {fields.map((f, i) => {
                                         return (
@@ -42,20 +42,20 @@ class Login extends Component {
                                         )
                                     })}
                                     <p className="lost-password form-group">
-                                        <a alt="" rel="nofollow">Forgot your password?</a>
+                                        <a alt="" rel="nofollow">Quên mật khẩu?</a>
                                     </p> 
                                     <div className="col-md-12">					
                                         <button className="btn-login" name="submitcreate" id="submitcreate" type="submit" style={{float:'left', marginBottom: '15px'}}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Dang nhap
+                                                đăng nhập
                                             </span>
                                         </button>
                                         <Link to="/signup" style={{float: 'right'}}>
                                         <button className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Dang ki
+                                                đăng kí
                                             </span>
                                         </button>
                                         </Link>
@@ -65,7 +65,7 @@ class Login extends Component {
                             <div className="col-md-6 col-sm-6">
                                 <form action="#" className="create-account-form" method="post" style={{display: 'block'}}>
                                     <h2 className="heading-title">
-                                        LOGIN WITH
+                                        Đăng nhập với
                                     </h2>
                                     <div className="col-md-12 submit">					
                                         <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
@@ -75,19 +75,19 @@ class Login extends Component {
                                             </span>
                                         </button>
                                     </div>
-                                    <div className="col-md-12 submit" style={{paddingBottom: '30px'}}>					
+                                    <div className="col-md-12 submit" style={{background: '#ffffff'}}>					
                                         <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Log in with facebook
+                                                Log in with Google
                                             </span>
                                         </button>
                                     </div>
-                                    <div className="col-md-12 submit">					
+                                    <div className="col-md-12 submit" style={{background: '#ffffff',paddingBottom: '30px'}}>					
                                         <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Log in with facebook
+                                                Log in with Zalo
                                             </span>
                                         </button>
                                     </div>
