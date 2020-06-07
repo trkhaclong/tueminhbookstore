@@ -64,7 +64,7 @@ const cates = [
     {type: 1,cate: 'Bách Hóa Online Lưu Niệm',link: '/bach-hoa-online-luu-niem'},
     {type: 2,cate: 'DỤNG CỤ VẼ', link: '/dung-cu-ve'},
     {type: 2,cate: 'ĐỒ CHƠI NỔI BẬT', link: '/do-choi-noi-bat'},
-    {type: 4,cate: 'Nguyễn Nhật Ánh', link: '/nguyen-nhat-anh'}
+    {type: 1,cate: 'anh long dep trai', link: '/anh-long-dep-trai'}
 ];
 
 const authors = [
