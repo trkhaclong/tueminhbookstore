@@ -109,6 +109,9 @@ const styles = theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         outline: 'none',
+        [theme.breakpoints.down('xs')]: {
+            width: '69%'
+        }
     },
     btnOrder: {
         backgroundColor: '#f39801',
