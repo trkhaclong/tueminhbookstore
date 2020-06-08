@@ -62,9 +62,7 @@ const cates = [
     {type: 1,cate: 'Đồ Chơi', link: '/do-choi'},
     {type: 1,cate: 'VPP Dụng Cụ Học Sinh', link: '/vpp-dung-cu-hoc-sinh'},
     {type: 1,cate: 'Bách Hóa Online Lưu Niệm',link: '/bach-hoa-online-luu-niem'},
-    {type: 2,cate: 'DỤNG CỤ VẼ', link: '/dung-cu-ve'},
-    {type: 2,cate: 'ĐỒ CHƠI NỔI BẬT', link: '/do-choi-noi-bat'},
-    {type: 1,cate: 'anh long dep trai', link: '/anh-long-dep-trai'}
+    
 ];
 
 const authors = [
