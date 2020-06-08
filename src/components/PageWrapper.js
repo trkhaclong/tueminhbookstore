@@ -49,40 +49,6 @@ const styles = theme => ({
             duration: theme.transitions.duration.leavingScreen
         }),
     },
-    appBarShift: {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen
-        }),
-    },
-    appBarSpace: theme.mixins.toolbar,
-    drawerPaper: {
-        position: 'relative',
-        whiteSpace: 'noWrap',
-        width: drawerWidth,
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.enteringScreen
-        }),
-    },
-    drawerPaperClose: {
-        overflowX: 'hidden',
-        width: theme.spacing(7),
-        transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen
-        }),
-    },
-    toolbarIcon: {
-        color: 'black',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '0 8px',
-        ...theme.mixins.toolbar
-    },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
@@ -90,7 +56,10 @@ const styles = theme => ({
         overflow: 'auto',
         [theme.breakpoints.down('md')]: {
             padding: 0,
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            overflow: 'inherit',
+        },
     },
     grow: {
         flexGrow: 1,
@@ -106,8 +75,11 @@ const styles = theme => ({
         display: 'block',
         [theme.breakpoints.up('lg')]: {
             width: '16%',
-            
         },
+        [theme.breakpoints.down('xs')]: {
+            width: '20%',
+            float: 'left'
+        }
     },
     logoIcon: {
         position: 'relative',
@@ -304,7 +276,6 @@ class PageWrapper extends Component {
                         <Link href="/">
                             <img className={classes.logoIcon} src={img1} alt="" />
                             <img className={classes.titleText} src={img2} alt=""/>
-                            
                         </Link>
                     </Typography>
                     <div className={classes.search}>
