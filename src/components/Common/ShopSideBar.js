@@ -4,13 +4,11 @@ import {Link} from 'react-router-dom';
 
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import Paper from '@material-ui/core/Paper';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuBook from '@material-ui/icons/MenuBook';
 import ToysIcon from '@material-ui/icons/Toys';
-import IconButton from '@material-ui/core/IconButton';
 import EventSeat from '@material-ui/icons/EventSeatRounded';
 import BookIcon from '@material-ui/icons/Book'
 import ChildIcon from '@material-ui/icons/ChildCare';
@@ -33,7 +31,6 @@ import SmokeFreeIcon from '@material-ui/icons/SmokeFree';
 
 class ShopSideBar extends Component {
     render(){
-        const classes= this.props;
         return(
             <div style={{width: '250', fontSize: '2rem'}} role= "presentation" onClick={this.toggleDrawer} onKeyDown={this.toggleDrawer}>
                         <List>

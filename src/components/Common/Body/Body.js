@@ -45,15 +45,15 @@ const banners = [
 
 const icons = [
     {img: storeIcon, caption: 'Cửa hàng', link: '/shop'},
-    {img: saleIcon, caption: 'Sale', link: '/shop/sale'},
+    {img: saleIcon, caption: 'Sale', link: '/shop'},
     {img: searchIcon, caption: 'Gợi ý cho bạn', link: '/shop'},
-    {img: facebookIcon, caption: 'facebuck', link: ''},
-    {img: toyIcon, caption: 'Đồ chơi', link: '/shop'},
-    {img: penIcon, caption: 'Văn phòng phẩm', link: '/shop'},
-    {img: bookIcon, caption: 'Văn học', link: '/shop'},
-    {img: childIcon, caption: 'Thiếu nhi', link: '/shop'},
-    {img: simpsonIcon, caption: 'Tâm lý kĩ năng', link: '/shop'},
-    {img: mindIcon, caption: 'Kinh tế', link: '/shop'},
+    {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com'},
+    {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
+    {img: penIcon, caption: 'Văn phòng phẩm', link: '/van-phong-pham'},
+    {img: bookIcon, caption: 'Văn học', link: '/van-hoc'},
+    {img: childIcon, caption: 'Thiếu nhi', link: '/thieu-nhi'},
+    {img: simpsonIcon, caption: 'Tâm lý kĩ năng', link: '/tam-ly-ki-nang'},
+    {img: mindIcon, caption: 'Kinh tế', link: '/kinh-te'},
 ];
 
 const cates = [
@@ -66,16 +66,16 @@ const cates = [
 ];
 
 const authors = [
-    {name: 'Paulo Coelho', link: '/authors/paulo-coelho', img: peopleimage1},
-    {name: 'Nguyễn Nhật Ánh', link: '/authors/nguyen-nhat-anh', img: peopleimage2},
-    {name: 'J.K Rowling', link: '/authors/jk-rowling', img: peopleimage3},
+    {name: 'Paulo Coelho', link: '/author/paulo-coelho', img: peopleimage1},
+    {name: 'Nguyễn Nhật Ánh', link: '/author/nguyen-nhat-anh', img: peopleimage2},
+    {name: 'J.K Rowling', link: '/author/jk-rowling', img: peopleimage3},
     
 ];
 
 const bestbooks = [
-    {name: 'Conan', link: '/shop/conans', img: bestbook1},
-    {name: 'Tam quốc diễn nghĩa', link: './shop/tam-quoc', img: bestbook2},
-    {name: 'Shin - Cậu bé bút chì', link: './shop/shin', img: bestbook3},
+    {name: 'Conan', link: '/conan', img: bestbook1},
+    {name: 'Tam quốc diễn nghĩa', link: './tam-quoc', img: bestbook2},
+    {name: 'Shin - Cậu bé bút chì', link: './shin', img: bestbook3},
 ]
 
 class Body extends Component {

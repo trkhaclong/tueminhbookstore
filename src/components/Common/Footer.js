@@ -2,15 +2,11 @@ import React, {Component} from 'react';
 import {Link } from 'react-router-dom';
 import logoIcon from '../assets/img/logowide.JPG';
 import dathongbao from '../assets/img/dathongbao.png';
-import android from '../assets/img/android.png';
-import appstore from '../assets/img/appstore.png';
 import facebookicon from '../assets/img/social-icon/Facebook.png';
 import youtubeicon from '../assets/img/social-icon/Youtube.png';
 import instaicon from '../assets/img/social-icon/Insta.png';
 import tumblricon from '../assets/img/social-icon/tumblr.png';
 import twittericon from '../assets/img/social-icon/twitter.png';
-import pinteresticon from '../assets/img/social-icon/pinterest.png';
-
 class Footer extends Component {
     render(){
         return(
@@ -131,7 +127,7 @@ class Footer extends Component {
 											</div>
 											<div className="footer-static-content">
 												<ul>
-													<li className="first"><Link to="/customer/account/login" >Đăng
+													<li className="first"><Link to="/login" >Đăng
 															nhập/Tạo mới tài khoản</Link></li>
 													<li><Link to="/customer/address">Thay đổi địa chỉ
 															khách hàng</Link></li>

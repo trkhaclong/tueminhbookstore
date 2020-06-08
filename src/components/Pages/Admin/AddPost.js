@@ -4,7 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import * as AdminActions from '../../../store/actions/adminActions';
 import Paper from '@material-ui/core/Paper';
 
-import {withFormik, Field, Form} from 'formik';
+import {withFormik, Form} from 'formik';
 import {FormikTextField, FormikSelectField} from 'formik-material-fields';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';

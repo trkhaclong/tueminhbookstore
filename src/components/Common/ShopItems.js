@@ -3,7 +3,6 @@ import API from '../../utils/api';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as SiteActions from '../../store/actions/siteActions';
-import * as AuthActions from '../../store/actions/authActions';
 
 
 import AddIcon from '@material-ui/icons/AddCircle';

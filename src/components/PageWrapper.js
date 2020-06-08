@@ -24,7 +24,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
+import StoreIcon from '@material-ui/icons/Store';
+import CallIcon from '@material-ui/icons/Call';
 
 import img1 from './assets/img/logotm.png';
 import img2 from './assets/img/logotext1.png';
@@ -32,7 +33,6 @@ import profileIcon from './assets/img/profile-icon.png'
 
 import Cart from './Common/Cart';
 
-const drawerWidth = 0;
 const logoWidth = 80;
 
 const styles = theme => ({
@@ -296,23 +296,27 @@ class PageWrapper extends Component {
                     </div>
                     <div className={classes.grow}>
                         <div className={classes.buttonStore}>
-                            <Link href='/shop' color='inherit'>
-                                Cửa hàng
-                            </Link>
+                            <IconButton>
+                                <Link href='/shop' color='inherit'>
+                                    <StoreIcon fontSize="large" color="primary" />
+                                </Link>
+                            </IconButton>
                         </div>
                         <div className={classes.buttonContact}>
-                            <a href='https://facebook.com/1723023664478547' color='inherit'>
-                                Liên hệ
-                            </a>
+                            <IconButton arial-label="" color="inherit">
+                                <Badge badgeContent={this.props.site.addedProducts.length} color="secondary" >
+                                        <ShoppingCart fontSize="large" onClick={this.toggleDrawer} color ="primary" />
+                                    
+                                </Badge>
+                            </IconButton>
                         </div>
                     </div>
                     <div className={classes.sectionDesktop}>
-                        <IconButton arial-label="" color="inherit">
-                            <Badge badgeContent={this.props.site.addedProducts.length} color="secondary" >
-                                    <ShoppingCart fontSize="large" onClick={this.toggleDrawer} color ="primary" />
-                                
-                            </Badge>
-                        </IconButton>
+                        <a href='https://facebook.com/1723023664478547' color='inherit'>
+                            <IconButton arial-label="" color="inherit">
+                                <CallIcon fontSize="large" color="primary"/>
+                            </IconButton>
+                        </a>
                         {this.props.auth.token ?
                             <IconButton
                                 edge="end"
@@ -360,12 +364,12 @@ class PageWrapper extends Component {
                 onClose={this.handleClose}
             >
                 <MenuItem onClick={this.toggleDrawer}>
-                    <IconButton color="inherit">
-                        <Badge badgeContent={this.props.site.addedProducts.length} color="secondary">
-                            <ShoppingCart fontSize="large" />
-                        </Badge>
-                    </IconButton>
-                    <p>Cart</p>
+                    <a href='https://facebook.com/1723023664478547' color='inherit'>
+                        <IconButton arial-label="" color="inherit">
+                            <CallIcon fontSize="large" color="primary"/>
+                        </IconButton>
+                    </a>
+                    <p>Liên Hệ</p>
                 </MenuItem>
                 <MenuItem>
                     {this.props.auth.token ?
@@ -391,26 +395,24 @@ class PageWrapper extends Component {
                 <Cart />
             </Drawer>
             {this.props.auth.token ?
-                <Drawer
-                    classes={{
-                        paper: classes.profileDrawer
-                    }}
-                    anchor="top"
-                    open={this.state.profile}
-                    onClose={this.toggleProfileDrawer}
-                >
-                    <div className={classes.profile}>
-                        <section className={classes.profileHeader}>
-                            <div className={classes.imgRound}>
-                                <img className={classes.imgProfile} src={profileIcon} alt="Profile" />
-                            </div>
-                            <div>
-                                <h2 className={classes.nameProfile}></h2>
-                                <p className={classes.ageProfile}></p>
-                            </div>
-                        </section>
-                    </div>
-                </Drawer>
+            <Drawer
+                classes={{
+                    paper: classes.profileDrawer
+                }}
+                anchor="top"
+                open={this.state.profile}
+                onClose={this.toggleProfileDrawer}
+            >
+                <div className={classes.profile}>
+                    <section className={classes.profileHeader}>
+                        <div className={classes.imgRound}>
+                            <img className={classes.imgProfile} src={profileIcon} alt="Profile" />
+                        </div>
+                        <div>
+                        </div>
+                    </section>
+                </div>
+            </Drawer>
             :null}
             <main className={classes.content}>
                 <div className={classes.appBarSpace} />
