@@ -75,16 +75,16 @@ class Login extends Component {
                                             </span>
                                         </button>
                                     </div>
-                                    <div className="col-md-12 submit" style={{background: '#ffffff'}}>					
-                                        <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
+                                    <div className="col-md-12 submit" >					
+                                        <button style={{background: '#ffffff'}} name="submitcreate" id="submitcreate" type="submit" className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with Google
                                             </span>
                                         </button>
                                     </div>
-                                    <div className="col-md-12 submit" style={{background: '#ffffff',paddingBottom: '30px'}}>					
-                                        <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
+                                    <div className="col-md-12 submit" >					
+                                        <button style={{background: '#ffffff',paddingBottom: '30px'}} name="submitcreate" id="submitcreate" type="submit" className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with Zalo
