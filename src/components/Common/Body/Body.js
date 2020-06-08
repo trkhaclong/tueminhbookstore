@@ -52,7 +52,7 @@ const icons = [
     {img: penIcon, caption: 'Văn phòng phẩm', link: '/van-phong-pham'},
     {img: bookIcon, caption: 'Văn học', link: '/van-hoc'},
     {img: childIcon, caption: 'Thiếu nhi', link: '/thieu-nhi'},
-    {img: simpsonIcon, caption: 'Tâm lý kĩ năng', link: '/tam-ly-ki-nang'},
+    {img: simpsonIcon, caption: 'Tâm lý', link: '/tam-ly'},
     {img: mindIcon, caption: 'Kinh tế', link: '/kinh-te'},
 ];
 
