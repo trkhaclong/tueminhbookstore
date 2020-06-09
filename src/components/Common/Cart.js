@@ -248,17 +248,17 @@ class Cart extends Component {
                         <div className={classes.sectionDesktop}>
                             <div className={classes.subtotal}>
                                 <div className={classes.subtotalText}>Thành tiền</div>
-                                <div className={classes.subtotalMoney}>{this.props.site.total}</div>
+                                <div className={classes.subtotalMoney}>{this.props.site.total} đ</div>
                             </div>
                             <div className={classes.subtotal}>
                                 <div className={classes.grandtotalText}>Tổng số tiền</div>
-                                <div className={classes.grandtotalMoney}>{this.props.site.total} </div>
+                                <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
                             </div>
                         </div>
                         <div className={classes.sectionMobile}>
                             <div className={classes.subtotal}>
                                 <div className={classes.grandtotalText}>Tổng số tiền</div>
-                                <div className={classes.grandtotalMoney}>{this.props.site.total} </div>
+                                <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
                             </div>
                         </div>
                         <Divider />

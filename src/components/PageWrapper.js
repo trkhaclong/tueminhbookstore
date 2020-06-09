@@ -153,19 +153,11 @@ const styles = theme => ({
         },
     },
     buttonContact: {
-        width: '50%',
+        width: '1000%',
         fontSize: 'large',
         fontFamily: 'monospace',
         color: '#d6993a',
-        [theme.breakpoints.down('xs')]: {
-            fontSize: 'medium',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: 'x-large',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: 'xx-large',
-        },
+        textAlign: 'right'
     },
     sectionDesktop: {
         display: 'none',

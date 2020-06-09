@@ -36273,6 +36273,7 @@ select::-ms-expand{
     }
     .sl-width{
         width:150px !important;
+        margin-left: 0;
     }
     .product-view .product-img-box .price-box{
         margin-left: 125px;
@@ -38880,4 +38881,14 @@ span.m-selected-filter-item {
     width: calc(100% - 180px);
     font-size: 1.1em;
     padding: 8px 0;
+}
+.item {
+    
+    float: left;
+    list-style: none;
+    position: relative;
+    height: 279px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
