@@ -36443,7 +36443,7 @@ select::-ms-expand{
         min-width: 280px;
     }
 }
-@media (min-width: 640px) and (max-width: 900px){
+@media (min-width: 660px) and (max-width: 900px){
     .product-view .product-img-box .product-image-zoom, .fhs-p-img{
         width: 210px;
     }
