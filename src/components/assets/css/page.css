@@ -36273,7 +36273,6 @@ select::-ms-expand{
     }
     .sl-width{
         width:150px !important;
-        margin-left: 0;
     }
     .product-view .product-img-box .price-box{
         margin-left: 125px;
@@ -36356,6 +36355,9 @@ select::-ms-expand{
     }
     .tab_container .bx-viewport{
         min-height: 255px !important;
+    }
+    .sl-width {
+        width: 220px !important;
     }
 }
 @media (max-width: 1200px){
