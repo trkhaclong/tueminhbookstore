@@ -41,10 +41,7 @@ class ShopItems extends Component {
                                         <span className="price-label">New Price</span>
                                         <span className="price m-price-font">{this.props.product.newPrice} đ</span>
                                     </p>
-                                    <p className="old-price bg-white">
-                                        <span className="price-label">Old Price</span>
-                                        <span style={{paddingLeft: '5px', color: '#888888', textDecoration: 'line-through', fontSize: '14px'}} className="price m-price-font old_price-tm">{this.props.product.oldPrice}đ</span>
-                                    </p>
+                                    
                                 </div>
                             </div>
                         </div>
