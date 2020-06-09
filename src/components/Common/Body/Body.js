@@ -47,7 +47,7 @@ const icons = [
     {img: storeIcon, caption: 'Cửa hàng', link: '/shop'},
     {img: saleIcon, caption: 'Sale', link: '/shop'},
     {img: searchIcon, caption: 'Gợi ý cho bạn', link: '/shop'},
-    {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com'},
+    {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com/1723023664478547'},
     {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
     {img: penIcon, caption: 'Văn phòng phẩm', link: '/van-phong-pham'},
     {img: bookIcon, caption: 'Văn học', link: '/van-hoc'},
@@ -73,9 +73,9 @@ const authors = [
 ];
 
 const bestbooks = [
-    {name: 'Conan', link: '/conan', img: bestbook1},
+    {name: 'Conan', link: '/truyen-tranh-nhat-ban/conan', img: bestbook1},
     {name: 'Tam quốc diễn nghĩa', link: './tam-quoc', img: bestbook2},
-    {name: 'Shin - Cậu bé bút chì', link: './shin', img: bestbook3},
+    {name: 'Shin - Cậu bé bút chì', link: './truyen-tranh-nhat-ban/shin', img: bestbook3},
 ]
 
 class Body extends Component {

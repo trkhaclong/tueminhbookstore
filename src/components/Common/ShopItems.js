@@ -25,7 +25,7 @@ class ShopItems extends Component {
                                             
                                             {this.props.product.ProductImage ?
                                                 this.props.product.ProductImage.length > 0 ?
-                                                    <img style={{width: '150px', height: '202px'}} alt={this.props.name} src={API.makeFileURL(this.props.product.ProductImage[0].url, null)} />
+                                                    <img style={{width: '150px', height: '202px'}} alt={this.props.name} src={API.makeFileURL(this.props.product.ProductImage[0].thumbail, null)} />
                                                 :null
                                             :null}
                                         </Link>
