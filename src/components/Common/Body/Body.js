@@ -61,7 +61,6 @@ const cates = [
     {type: 1,cate: 'Truyện Tranh', link: '/truyen-tranh'},
     {type: 1,cate: 'Đồ Chơi', link: '/do-choi'},
     {type: 1,cate: 'VPP Dụng Cụ Học Sinh', link: '/vpp-dung-cu-hoc-sinh'},
-    {type: 1,cate: 'Bách Hóa Online Lưu Niệm',link: '/bach-hoa-online-luu-niem'},
     
 ];
 

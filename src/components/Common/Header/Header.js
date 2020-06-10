@@ -54,7 +54,7 @@ const contents = [
         cate3: 'DỤNG CỤ VẼ', child30: 'Bút Vẽ', child31: 'Màu vẽ', child32: 'Khay', child33: 'Tập vẽ', child34: 'Xem thêm ...',
         link3: '/dung-cu-ve', clink30: '/dung-cu-ve/but-ve', clink31: '/dung-cu-ve/mau-ve', clink32: '/dung-cu-ve/khay', clink33: '/dung-cu-ve/tap-ve',
         cate4: 'SẢN PHẨM VỀ GIẤY', child40: 'Vở viết các loại', child41: 'Sổ tay các loại', child42: 'Giấy Photo', child43: 'Giấy note',  child44: 'Xem thêm ...',
-        link4: '/san-pham-ve-giay', clink40: '/san-pham-ve-giay/vo', clink41: '/san-pham-ve-giay/so-tay', clink42: '/san-pham-ve-giay/giay-photo', clink43: '/san-pham-ve-giay/giay-note',
+        link4: '/san-pham-ve-giay', clink40: '/san-pham-ve-giay/vo', clink41: '/san-pham-ve-giay/so-tay-cac-loai', clink42: '/san-pham-ve-giay/giay-photo', clink43: '/san-pham-ve-giay/giay-note',
         cate5: 'SẢN PHẨM KHÁC', child50: 'Dao rọc giấy', child51: 'Băng keo', child52: 'Túi Zip', child53: 'Bảng', child54: 'Xem thêm ...',
         link5: '/san-pham-khac', clink50: '/san-pham-khac/dao-roc-giay', clink51: '/san-pham-khac/bang-keo', clink52: '/san-pham-khac/tui-zip', clink53: '/san-pham-khac/bang',
         cate6: 'SẢN PHẨM ĐIỆN TỬ', child60: 'Máy tính điện tử', child61: 'Đồng hồ điện tử',child62: 'Đèn led',child63: 'Đồ chơi điện tử', child64: 'Xem thêm ...',
