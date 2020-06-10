@@ -28,6 +28,7 @@ import LoginWrapper from './components/LoginWrapper';
 import PageWrapper from './components/PageWrapper';
 
 import Footer from './components/Common/Footer';
+import UserInfo from './components/Common/UserInfo';
 
 import DoChoi from './components/Pages/Shop/dochoi';
 import TruyenTranh from './components/Pages/Shop/truyentranh';
@@ -371,7 +372,7 @@ class App extends Component {
                   :
                   <PageWrapper>
                     <LoginWrapper>
-                      <Login />
+                      <UserInfo />
                       <Footer />
                     </LoginWrapper>
                   </PageWrapper>
