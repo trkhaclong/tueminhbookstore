@@ -68,7 +68,7 @@ class Login extends Component {
                                         Đăng nhập với
                                     </h2>
                                     <div className="col-md-12 submit">					
-                                        <button name="submitcreate" id="submitcreate" type="submit" className="btn-login">
+                                        <button className="btn-login facebook" onClick={() => this.props.authenticate("Facebook")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with facebook
@@ -76,7 +76,7 @@ class Login extends Component {
                                         </button>
                                     </div>
                                     <div className="col-md-12 submit" >					
-                                        <button style={{background: '#ffffff'}} name="submitcreate" id="submitcreate" type="submit" className="btn-login">
+                                        <button style={{background: '#11d417'}} className="btn-login" onClick={() => this.props.authenticate("Github")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with Google

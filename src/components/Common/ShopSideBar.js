@@ -105,7 +105,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Truyện tranh"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc/ngon-tinh">
+                            <Link to="/van-hoc">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <SortByAlphaIcon />
