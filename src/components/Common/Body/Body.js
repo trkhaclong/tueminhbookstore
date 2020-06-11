@@ -9,10 +9,10 @@ import IconMenu from './IconMenu';
 import HomeShop from './HomeShop';
 import PeopleAndBooks from './PeopleAndBooks';
 
-import img1 from '../../assets/img/home/banner1.png';
-import img2 from '../../assets/img/home/banner2.png';
-import img3 from '../../assets/img/home/banner3.png';
-import img4 from '../../assets/img/home/banner4.png';
+import img1 from '../../assets/img/home/banner1-min.jpg';
+import img2 from '../../assets/img/home/banner2-min.jpg';
+import img3 from '../../assets/img/home/banner3-min.jpg';
+import img4 from '../../assets/img/home/banner4-min.jpg';
 
 import bannerimg from '../../assets/img/banner/banner0.png';
 
@@ -27,13 +27,13 @@ import childIcon from '../../assets/img/icons/child-icon.png';
 import simpsonIcon from '../../assets/img/icons/simpson-icon.png';
 import mindIcon from '../../assets/img/icons/mind-icon.png';
 
-import peopleimage1 from '../../assets/img/authors/paulo-coelho.jpg';
-import peopleimage2 from '../../assets/img/authors/nguyen-nhat-anh.jpg';
-import peopleimage3 from '../../assets/img/authors/jk-rowling.jpg';
+import peopleimage1 from '../../assets/img/authors/paulo-coelho-min.jpg';
+import peopleimage2 from '../../assets/img/authors/nguyen-nhat-anh-min.jpg';
+import peopleimage3 from '../../assets/img/authors/jk-rowling-min.jpg';
 
-import bestbook1 from '../../assets/img/bestbooks/conan.jpg';
-import bestbook2 from '../../assets/img/bestbooks/tam-quoc.jpg';
-import bestbook3 from '../../assets/img/bestbooks/shin.jpg';
+import bestbook1 from '../../assets/img/bestbooks/conan-min.jpg';
+import bestbook2 from '../../assets/img/bestbooks/tam-quoc-min.jpg';
+import bestbook3 from '../../assets/img/bestbooks/shin-min.jpg';
 
 
 const banners = [

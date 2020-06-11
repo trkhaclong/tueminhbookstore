@@ -6,11 +6,11 @@ import '../../assets/css/header.css';
 import BlockContent from './DanhMucSP/BlockContent';
 import SlideShow from './SlideShow';
 
-import img1 from '../../assets/img/home/1.png';
-import img2 from '../../assets/img/home/2.png';
-import img3 from '../../assets/img/home/3.png';
-import img4 from '../../assets/img/home/4.png';
-import img5 from '../../assets/img/home/5.png';
+import img1 from '../../assets/img/home/1-min.jpg';
+import img2 from '../../assets/img/home/2-min.jpg';
+import img3 from '../../assets/img/home/3-min.jpg';
+import img4 from '../../assets/img/home/4-min.jpg';
+import img5 from '../../assets/img/home/5-min.jpg';
 
 
 const contents = [

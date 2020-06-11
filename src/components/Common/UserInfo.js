@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Login from "../Pages/Login";
+import firebase from 'firebase';
+import firebaseApp from './base.js';
 
 class UserInfo extends Component {
     state = {
