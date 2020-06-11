@@ -5,6 +5,8 @@ import Field from '../Common/Field';
 import {connect} from 'react-redux';
 import * as AuthActions from '../../store/actions/authActions';
 import {Link} from 'react-router-dom';
+import firebase from 'firebase';
+import firebaseApp from '../Common/base.js';
 
 
 const fields= [
@@ -13,6 +15,41 @@ const fields= [
 ]
 
 class Login extends Component {
+    state = {
+        email: null,
+        displayName: null
+    };
+
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.authHandler({ user });
+            }
+        });
+    }
+
+    authenticate = provider => {
+        console.log(provider);
+        const authProvider = new firebase.auth[`${provider}AuthProvider`]();
+        firebaseApp
+            .auth()
+            .signInWithPopUp(authProvider)
+            .then(this.authHandler);
+    };
+
+    authHandler = async authData => {
+        const user = authData.user;
+        this.setState({
+            email: user.email,
+            displayName: user.displayName
+        });
+    };
+
+    logout = async () => {
+        await firebase.auth().signOut();
+        this.setState({email: null, displayName: null});
+    };
+
     render(){
         return(
             <div className="login-account section-padding">
@@ -68,7 +105,7 @@ class Login extends Component {
                                         Đăng nhập với
                                     </h2>
                                     <div className="col-md-12 submit">					
-                                        <button className="btn-login facebook" onClick={() => props.authenticate("Facebook")}>
+                                        <button className="btn-login facebook" onClick={() => this.props.authenticate("Facebook")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with facebook
@@ -76,7 +113,7 @@ class Login extends Component {
                                         </button>
                                     </div>
                                     <div className="col-md-12 submit" >					
-                                        <button style={{background: '#11d417'}} className="btn-login" onClick={() => props.authenticate("Github")}>
+                                        <button style={{background: '#11d417'}} className="btn-login" onClick={() => this.props.authenticate("Github")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with Github
