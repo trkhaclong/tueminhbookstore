@@ -10,7 +10,7 @@ class CartItems extends Component {
             <div className="shelf-item_tm" key={this.props.product.id}>
                 <ClearIcon onClick={e => this.props.removeProduct(this.props.product.id)} color="secondary" fontSize="large" className="shelf-item_del_tm"/>
                 <div className="shelf-item_thumb_tm">
-                    <img alt={this.props.product.name} src={API.makeFileURL(this.props.product.ProductImage[0].url, null)} />
+                    <img alt={this.props.product.name} src={API.makeFileURL(this.props.product.ProductImage[0].thumbail, null)} />
                 </div>
                 <div className="shelf-item_details_tm">
                    <p className="title_tm">{this.props.product.name}</p>
