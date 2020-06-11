@@ -24,7 +24,7 @@ class Footer extends Component {
 												<h3>Newsletter</h3>
 												<label htmlFor="newsletter">Đăng ký nhận bản tin</label>
 											</div>
-											<form action="https://www.fahasa.com/newsletter/subscriber/new/" method="post" id="newsletter-validate-detail">
+											<form method="post" id="newsletter-validate-detail">
 												<div className="subscribe-content">
 													<div className="actions" style={{display: 'block'}}>
 														<button type="submit" title="Đăng ký" className="button" ><span>Đăng ký</span></button>
@@ -103,7 +103,7 @@ class Footer extends Component {
 												<ul>
 													<li className="first"><Link to="/dieu-khoan-su-dung">Điều khoản sử dụng</Link></li>
 													<li><Link to="/chinh-sach-bao-mat">Chính sách bảo mật</Link></li>
-													<li><Link to="/gioi-thieu-fahasa">Giới thiệu Fahasa</Link></li>
+													<li><Link to="/gioi-thieu-tueminh">Giới thiệu Tuệ Minh</Link></li>
 													<li className="last"><Link to="/he-thong-trung-tam-nha-sach">Hệ thống trung tâm - nhà sách</Link></li>
 												</ul>
 											</div>

@@ -99,7 +99,7 @@ class Login extends Component {
                                     </div>                          
                             </form>
                             </div>
-                            <div className="col-md-6 col-sm-6">
+                            <div className="display-none col-md-6 col-sm-6">
                                 <form action="#" className="create-account-form" method="post" style={{display: 'block'}}>
                                     <h2 className="heading-title">
                                         Đăng nhập với
