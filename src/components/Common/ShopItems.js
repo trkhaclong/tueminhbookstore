@@ -15,7 +15,9 @@ class ShopItems extends Component {
             
                     <li className="item sl-width" aria-hidden="false" style={{float: 'left', listStyle: 'none', position: 'relative', width: '17%', height: '328px', marginLeft: '10px', marginRight: '10px'}}>
                         <div className="item-inner" style={{position: 'relative'}}>
-                            
+                            <div className="label-pro-sale">
+                                <div onClick={e => this.props.addToCart(this.props.product)} className="p-sale-label discount-1-fs" ><AddShoppingCartIcon style={{fontSize: '2.5em'}} /></div>
+                            </div>
                             <div className="ma-box-content">
                                 <div className="products clearfix">
                                     <div className="product images-container">
@@ -39,9 +41,6 @@ class ShopItems extends Component {
                                         <span className="price-label">New Price</span>
                                         <span className="price m-price-font">{this.props.product.newPrice} đ</span>
                                     </p>
-                                    <div className="label-pro-sale">
-                                        <div onClick={e => this.props.addToCart(this.props.product)} className="p-sale-label discount-1-fs" ><AddShoppingCartIcon style={{fontSize: '2.5em'}} /></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
