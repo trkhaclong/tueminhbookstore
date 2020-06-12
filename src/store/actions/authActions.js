@@ -49,8 +49,12 @@ export const register = (name, email, pass) => {
             }
         })
     }
-    // {
-    //     type: 'REGISTER',
-    //     payload: {email, pass}
-    // }
+}
+export const logout = res => {
+    console.log("log out", res);
+    return dispatch => {
+        dispatch({
+            type: 'LOGOUT',
+        })
+    }
 }

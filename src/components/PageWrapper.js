@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link as RouterLink} from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import {connect} from 'react-redux';
+import * as AuthActions from '../store/actions/authActions';
 
 
 import classNames from 'clsx';
@@ -209,7 +210,28 @@ const styles = theme => ({
     },
     profileDrawer: {
 
-    }
+    },
+    logOutContainer: {
+        minHeight: '100px',
+        marginTop: '100px',
+        width: '100%',
+        textAlign: 'center'
+    },
+    logOutButton: {
+        display: 'inline-block',
+        color: '#fff',
+        backgroundColor: '#E48681',
+        borderColor: 'rbga(0,0,0,0.3)',
+        textShadow: '0 1px 0 rbga(0,0,0,0.5)',
+        letterSpacing: '2px',
+        fontSize: '12px',
+        padding: '10px 30px',
+        borderRadius: '5px',
+        border: '1px solid rbga(0,0,0,0.3)',
+        borderBottomWidth: '3px',
+        textDecoration: 'none',
+        margin: '0 10px'
+    },
 });
 
 class PageWrapper extends Component {
@@ -387,24 +409,27 @@ class PageWrapper extends Component {
                 <Cart />
             </Drawer>
             {this.props.auth.token ?
-            <Drawer
-                classes={{
-                    paper: classes.profileDrawer
-                }}
-                anchor="top"
-                open={this.state.profile}
-                onClose={this.toggleProfileDrawer}
-            >
-                <div className={classes.profile}>
-                    <section className={classes.profileHeader}>
-                        <div className={classes.imgRound}>
-                            <img className={classes.imgProfile} src={profileIcon} alt="Profile" />
-                        </div>
-                        <div>
-                        </div>
-                    </section>
-                </div>
-            </Drawer>
+                <Drawer
+                    classes={{
+                        paper: classes.profileDrawer
+                    }}
+                    anchor="top"
+                    open={this.state.profile}
+                    onClose={this.toggleProfileDrawer}
+                >
+                    <div className={classes.profile}>
+                        <section className={classes.profileHeader}>
+                            <div className={classes.imgRound}>
+                                <img className={classes.imgProfile} src={profileIcon} alt="Profile" />
+                            </div>
+                            <div className={classes.logOutContainer}>
+                                <p>
+                                    <button className="logout-btn-tm" onClick={() => {this.props.logout()}}>Đăng xuất</button>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </Drawer>
             :null}
             <main className={classes.content}>
                 <div className={classes.appBarSpace} />
@@ -419,7 +444,15 @@ const mapStateToProps = state => ({
     site: state.site,
     auth: state.auth
 })
+const mapDispatchToProps = dispatch => {
+    return {
+        logout: () => {
+            dispatch(AuthActions.logout());
+        }
+    }
+}
 
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(withStyles(styles)(PageWrapper));

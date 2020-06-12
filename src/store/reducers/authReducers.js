@@ -23,6 +23,13 @@ const auth = (state = defaultState, action) => {
                 ...state,
                 profile: action.payload.Profile
             }
+        case 'LOGOUT':
+            return {
+                ...state,
+                token: null,
+                user: {},
+                profile: null
+            }
         default:
             return state
     }
