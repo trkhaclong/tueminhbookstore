@@ -137,7 +137,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Truyện ngắn"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc">
+                            <Link to="/van-hoc/ngon-tinh">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <EmojiEmotionsIcon />
@@ -164,7 +164,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Sách tham khảo"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/vo-viet-cac-loai">
+                            <Link to="/san-pham-ve-giay/vo-viet-cac-loai">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <MenuBookTwoToneIcon />

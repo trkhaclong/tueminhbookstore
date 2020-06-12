@@ -29474,3 +29474,6 @@ span.m-selected-filter-item {
     font-size: 1.1em;
     padding: 8px 0;
 }
+.display-none {
+    display: none;
+}
