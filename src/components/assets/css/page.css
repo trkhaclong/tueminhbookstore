@@ -26410,10 +26410,24 @@ li.d_2.fields div{
     margin-bottom: 20px;
 }
 .label-pro-sale {
-    background: url('../img/shopitem-add.png') no-repeat;
+    background-color: #F7941E;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    
+    font-size: 19px;
+    font-weight: bold;
+    color: transparent;
 }
 .product-view .label-pro-sale{
-    background: url('../img/shopitem-add.png') no-repeat;
+    background-color: #F7941E;
 }
 .products-grid li.col-md-2 {
     margin-left: 10px;
