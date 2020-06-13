@@ -44,6 +44,12 @@ const API = {
             success(res);
         })
     },
+    getReceipts: (token, success) => {
+        axios.get(`${host}/api/receipts?access_token=${token}`)
+        .then(res => {
+            success(res);
+        })
+    },
     getPostCount: (success) => {
         axios.get(`${host}/api/Posts/count`)
         .then(res => {
