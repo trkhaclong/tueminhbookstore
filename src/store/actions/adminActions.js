@@ -22,6 +22,17 @@ export const getProducts = (token) => {
     }
 }
 
+export const getReceipts = (token) => {
+    return dispatch => {
+        API.getReceipts(token, res => {
+            dispatch({
+                type: 'GOT_RECEIPTS',
+                payload: res.data
+            })
+        })
+    }
+}
+
 export const addProduct = (product, token) => {
     return dispatch => {
         API.addProduct(product, token, res => {

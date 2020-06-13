@@ -43,9 +43,6 @@ class SignUp extends Component {
                                             </div>
                                         )
                                     })}
-                                    <p className="lost-password form-group">
-                                        <a href="#" rel="nofollow">Quên mật khẩu?</a>
-                                    </p> 
                                     <div className="col-md-12">
                                         <p className="text-danger text-center">{this.props.auth.error || ""}</p>			
                                         <button className="btn-login" style={{marginRight:'18px'}}>
