@@ -22,6 +22,8 @@ import Users from './components/Pages/Admin/Users';
 import AddPost from './components/Pages/Admin/AddPost';
 import Products from './components/Pages/Admin/Products';
 import AddProduct from './components/Pages/Admin/AddProduct';
+import Receipts from './components/Pages/Admin/Receipts';
+
 
 import AdminWrapper from './components/AdminWrapper';
 import LoginWrapper from './components/LoginWrapper';
@@ -192,6 +194,27 @@ class App extends Component {
                 {this.props.auth.token ?
                   <AdminWrapper>
                     <Users />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+              }
+              </div>
+              
+              )
+            }}
+          />
+          <Route
+            path='/admin/receipts'
+            render={props => {
+              return(
+                <div>
+                {this.props.auth.token ?
+                  <AdminWrapper>
+                    <Receipts />
                   </AdminWrapper>
                 :
                 <PageWrapper>
