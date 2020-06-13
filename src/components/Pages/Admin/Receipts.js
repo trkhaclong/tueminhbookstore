@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import TableView from '../../Common/TableView';
 import {connect} from 'react-redux';
 import * as AdminActions from '../../../store/actions/adminActions';
+import TableView from '../../Common/TableView;'
 
 const columns = [
     {label: 'ID', name: 'id'},

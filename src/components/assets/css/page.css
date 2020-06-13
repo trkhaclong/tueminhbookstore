@@ -27213,14 +27213,14 @@ select::-ms-expand{
         width: 475px !important;
     }
 }
-@media (max-width: 700px){
+@media (max-width: 660px){
     .product-view .product-img-box .price-box{
     }
     .tab_container .bx-viewport{
         min-height: 255px !important;
     }
     .sl-width {
-        width: 232px !important;
+        width: 222px !important;
     }
 }
 @media (max-width: 1200px){
@@ -27306,7 +27306,7 @@ select::-ms-expand{
         min-width: 280px;
     }
 }
-@media (min-width: 700px) and (max-width: 900px){
+@media (min-width: 660px) and (max-width: 900px){
     .product-view .product-img-box .product-image-zoom, .fhs-p-img{
         width: 210px;
     }

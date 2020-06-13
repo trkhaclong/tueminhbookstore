@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link } from 'react-router-dom';
 import logoIcon from '../assets/img/logowide.JPG';
-import dathongbao from '../assets/img/dathongbao.png';
 import facebookicon from '../assets/img/social-icon/Facebook.png';
 import youtubeicon from '../assets/img/social-icon/Youtube.png';
 import instaicon from '../assets/img/social-icon/Insta.png';
@@ -67,11 +66,7 @@ class Footer extends Component {
 												Tueminhbookstore
 												nhận đặt hàng trực tuyến và giao hàng tận nơi.
 											</div>
-											<div className="col-sm-12 col-md-12 col-xs-12 address-footer" style={{margin: '15px 0px'}}>
-												<a target="_blank" to="/">
-													<img src={dathongbao} style={{width: '100px', float: 'left'}} height= '40px'/>
-												</a>
-											</div>
+											
 										</div>
 										<div align="left" style={{fontSize:'14.5px', marginBottom:'20px', marginTop:'10px', padding: '0px', textAlign: 'left', marginLeft: '10px'}}>
 											<a target="_blank" href="https://www.facebook.com/1723023664478547/" title="Facebook">

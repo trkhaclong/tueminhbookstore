@@ -224,7 +224,14 @@ class Cart extends Component {
                     </div>
                     {this.props.site.total > 0 ?
                         <div className="buy-btn_tm" onClick={this.toggleDrawer}>Mua ngay</div>
-                    :<div className="buy-btn_tm">Mua ngay</div>}
+                    :<div>
+                        <p className="help-block text-danger">
+                            <span>Bạn phải mua cái gì đó đã chứ @@</span>
+                        </p>
+                        <div className="buy-btn_tm">
+                            Mua ngay
+                        </div>
+                    </div>}
                 </div>
                 <Drawer
                     classes={{
