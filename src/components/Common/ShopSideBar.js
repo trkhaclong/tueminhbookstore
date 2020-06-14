@@ -47,20 +47,21 @@ class ShopSideBar extends Component {
                         <Divider />
                         <List>
                             
-                            <Link to="/shop/sachtruyen/vanhoc">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <BookIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Sách, truyện"/>
-                                </ListItem>
-                            </Link>
+                            
                             <Link to="/shop/dochoi">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <ToysIcon />
                                     </ListItemIcon>
                                     <ListItemText primary="Đồ chơi"/>
+                                </ListItem>
+                            </Link>
+                            <Link to="/shop/sachtruyen/vanhoc">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <BookIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Sách, truyện"/>
                                 </ListItem>
                             </Link>
                             <Link to="/shop/vanphongpham">
