@@ -21,7 +21,7 @@ class ShopItems extends Component {
                             <div className="ma-box-content">
                                 <div className="products clearfix">
                                     <div className="product images-container">
-                                        <Link className="product-image" to={`/shop/${this.props.product.id}`} onClick={e => this.props.setProductData(this.props.product)} title={this.props.product.name}>
+                                        <Link className="product-image" to={`/product/${this.props.product.id}`} onClick={e => this.props.setProductData(this.props.product)} title={this.props.product.name}>
                                             
                                             {this.props.product.ProductImage ?
                                                 this.props.product.ProductImage.length > 0 ?

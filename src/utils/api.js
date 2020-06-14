@@ -171,7 +171,7 @@ const API = {
                         inventory: true,
                         category: true,
                         category1: true,
-                        category2: true
+                        category2: true, category3: true
                     }
                 }
             }
@@ -199,7 +199,7 @@ const API = {
                         inventory: true,
                         category: true,
                         category1: true,
-                        category2: true
+                        category2: true, category3: true
                     }
                 }
             }
@@ -227,7 +227,7 @@ const API = {
                         inventory: true,
                         category: true,
                         category1: true,
-                        category2: true
+                        category2: true, category3: true
                     }
                 }
             }
@@ -255,7 +255,35 @@ const API = {
                         inventory: true,
                         category: true,
                         category1: true,
-                        category2: true
+                        category2: true, category3: true
+                    }
+                }
+            }
+        })
+        .then(res => {
+            success(res);
+        })
+    },
+    getCate3Products: (skip, cate, success) => {
+        axios.get(`${host}/api/Products`, {
+            params: {
+                filter: {
+                    skip: skip,
+                    limit: 10,
+                    include: 'ProductImage',
+                    where: {category3: cate},
+                    fields: {
+                        id: true,
+                        name: true,
+                        supplier: true,
+                        author: true,
+                        newPrice: true,
+                        oldPrice: true,
+                        publishing: true,
+                        inventory: true,
+                        category: true,
+                        category1: true,
+                        category2: true, category3: true
                     }
                 }
             }
@@ -281,7 +309,7 @@ const API = {
                         inventory: true,
                         category: true,
                         category1: true,
-                        category2: true
+                        category2: true, category3: true
                     }
                 }
             }

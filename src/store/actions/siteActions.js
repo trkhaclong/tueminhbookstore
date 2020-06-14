@@ -89,6 +89,17 @@ export const getCate2Products = (skip, cate) => {
         })
     }
 }
+export const getCate3Products = (skip, cate) => {
+    return dispatch => {
+        API.getCate3Products(skip, cate, res => {
+            dispatch({
+                type: 'GOT_CATE3_PRODUCTS',
+                payload: res.data,
+                skip: skip,
+            });
+        })
+    }
+}
 
 export const getHomeProducts = (skip) => {
     return dispatch => {

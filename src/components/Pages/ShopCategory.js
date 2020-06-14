@@ -53,7 +53,7 @@ const styles = theme => ({
 });
 
 
-class Shop extends Component {
+class ShopCategory extends Component {
     constructor(props){
         super(props);
 
@@ -63,7 +63,14 @@ class Shop extends Component {
     }
 
     componentDidMount(){
-        this.props.getSiteProducts(0);
+        if(this.props.match.params.category3)
+            this.props.getCate3Products(0, this.props.match.params.category3)
+        else if (this.props.match.params.category2)
+            this.props.getCate2Products(0, this.props.match.params.category2)
+        else if (this.props.match.params.category1)
+            this.props.getCate1Products(0, this.props.match.params.category1)
+        else
+            this.props.getCateProducts(0, this.props.match.params.category)
         this.props.getProductCount();
     }
 
@@ -85,7 +92,7 @@ class Shop extends Component {
             <div>
                 <div className="page-empty-banner col-lg-12 col-md-12 col-sm-12">
                     <div className="page-banner page-banner-tm">
-                        <Link to="/">
+                        <Link to="">
                             <img src={image} alt="" />
                         </Link>
                     </div>
@@ -120,7 +127,14 @@ class Shop extends Component {
                             {this.props.site.productCount > this.props.site.products.length ?
                                 <div className="tabs-xem-them xem-them-item-aaa">
                                     <Link onClick={e => {
-                                        this.props.getSiteProducts(this.props.site.products.length);
+                                        if(this.props.match.params.category3)
+                                            this.props.getCate3Products(this.props.site.products.length, this.props.match.params.category3);
+                                        else if (this.props.match.params.category2)
+                                            this.props.getCate2Products(this.props.site.products.length, this.props.match.params.category2);
+                                            else if (this.props.match.params.category1)
+                                                this.props.getCate1Products(this.props.site.products.length, this.props.match.params.category1);
+                                                else
+                                                    this.props.getCateProducts(this.props.site.products.length, this.props.match.params.category);
                                     }}>Xem Thêm</Link>
                                 </div>
                             :null}
@@ -142,8 +156,17 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    getSiteProducts: (skip) => {
-        dispatch(SiteActions.getProducts(skip));
+    getCateProducts: (skip, cate) => {
+        dispatch(SiteActions.getCateProducts(skip, cate));
+    },
+    getCate1Products: (skip, cate) => {
+        dispatch(SiteActions.getCate1Products(skip, cate));
+    },
+    getCate2Products: (skip, cate) => {
+        dispatch(SiteActions.getCate2Products(skip, cate));
+    },
+    getCate3Products: (skip, cate) => {
+        dispatch(SiteActions.getCate3Products(skip, cate));
     },
     getProductCount: () => {
         dispatch(SiteActions.getProductCount());
@@ -153,4 +176,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(withStyles(styles)(Shop)));
+)(withStyles(styles)(ShopCategory)));

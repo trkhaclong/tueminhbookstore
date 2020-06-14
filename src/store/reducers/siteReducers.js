@@ -61,6 +61,11 @@ const site = (state = defaultState, action) => {
                 ...state,
                 products: action.skip ? state.products.concat(action.payload) : action.payload
             }
+        case 'GOT_CATE3_PRODUCTS':
+            return {
+                ...state,
+                products: action.skip ? state.products.concat(action.payload) : action.payload
+            }
         case 'GOT_HOME_PRODUCTS':
             return {
                 ...state,

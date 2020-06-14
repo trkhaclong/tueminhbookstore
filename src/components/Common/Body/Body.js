@@ -50,10 +50,10 @@ const icons = [
     {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com/1723023664478547'},
     {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
     {img: penIcon, caption: 'Văn phòng phẩm', link: '/van-phong-pham'},
-    {img: bookIcon, caption: 'Văn học', link: '/van-hoc'},
+    {img: bookIcon, caption: 'Văn học', link: '/sach-trong-nuoc/van-hoc'},
     {img: childIcon, caption: 'Thiếu nhi', link: '/thieu-nhi'},
-    {img: simpsonIcon, caption: 'Tâm lý', link: '/tam-ly'},
-    {img: mindIcon, caption: 'Kinh tế', link: '/kinh-te'},
+    {img: simpsonIcon, caption: 'Tâm lý', link: '/sach-trong-nuoc/tam-ly'},
+    {img: mindIcon, caption: 'Kinh tế', link: '/sach-trong-nuoc/kinh-te'},
 ];
 
 const cates = [
@@ -72,9 +72,9 @@ const authors = [
 ];
 
 const bestbooks = [
-    {name: 'Conan', link: '/truyen-tranh-nhat-ban/conan', img: bestbook1},
-    {name: 'Tam quốc diễn nghĩa', link: './tam-quoc', img: bestbook2},
-    {name: 'Shin - Cậu bé bút chì', link: './truyen-tranh-nhat-ban/shin', img: bestbook3},
+    {name: 'Conan', link: 'shop/truyen-tranh/truyen-tranh-nhat-ban/trinh-tham/conan', img: bestbook1},
+    {name: 'Tam quốc diễn nghĩa', link: './sach-trong-nuoc/van-hoc/tieu-thuyet/tam-quoc', img: bestbook2},
+    {name: 'Shin - Cậu bé bút chì', link: '.truyen-tranh/truyen-tranh-nhat-ban/thieu-nhi/shin', img: bestbook3},
 ]
 
 class Body extends Component {

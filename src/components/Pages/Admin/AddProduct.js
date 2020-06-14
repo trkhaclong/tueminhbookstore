@@ -141,6 +141,24 @@ class AddProduct extends Component {
                             margin="normal"
                             fullWidth
                         />
+                        <FormikTextField
+                            name="category3"
+                            label="Category3"
+                            margin="normal"
+                            fullWidth
+                        />
+                        <FormikTextField
+                            name="category4"
+                            label="Category4"
+                            margin="normal"
+                            fullWidth
+                        />
+                        <FormikTextField
+                            name="category5"
+                            label="Category5"
+                            margin="normal"
+                            fullWidth
+                        />
                         <ReactQuill
                             value={this.props.values.description}
                             modules={this.modules}
@@ -237,6 +255,10 @@ export default withRouter(connect(
         category: props.admin.product.category || '',
         category1: props.admin.product.category1 || '',
         category2: props.admin.product.category2 || '',
+        category3: props.admin.product.category3 || '',
+        category4: props.admin.product.category4 || '',
+        category5: props.admin.product.category5 || '',
+        
     }),
     validationSchema: Yup.object().shape({
         name: Yup.string().required(),
@@ -246,6 +268,7 @@ export default withRouter(connect(
         inventory: Yup.string().required(),
         newPrice: Yup.string().required(),
         description: Yup.string().required(),
+        category: Yup.string().required(),
         category1: Yup.string().required(),
         category2: Yup.string().required()
     }),
