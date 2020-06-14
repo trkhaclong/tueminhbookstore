@@ -20,7 +20,7 @@ const fields = [
 class SingleProduct extends Component {
     componentDidMount(){
         this.props.getSingleProduct(this.props.match.params.id, this.props.auth.token);
-        this.props.getCateProducts(0, this.props.site.product.category);
+        this.props.getCate3Products(0, this.props.site.product.category3);
     }
 
     render(){
@@ -310,8 +310,8 @@ const mapDispatchToProps = dispatch => ({
     getSingleProduct: (id, token) => {
         dispatch(SiteActions.getProductById(id, token));
     },
-    getCateProducts: (skip, cate) => {
-        dispatch(SiteActions.getCateProducts(skip, cate));
+    getCate3Products: (skip, cate) => {
+        dispatch(SiteActions.getCate3Products(skip, cate));
     },
     addToCart: (product) => {
         dispatch(SiteActions.addToCart(product));

@@ -46,6 +46,15 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
+                            
+                            <Link to="/shop/sachtruyen/vanhoc">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <BookIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Sách, truyện"/>
+                                </ListItem>
+                            </Link>
                             <Link to="/shop/dochoi">
                                 <ListItem button >
                                     <ListItemIcon>
@@ -62,14 +71,6 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Văn phòng phẩm"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/shop/sachtruyen/vanhoc">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <BookIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Văn học"/>
-                                </ListItem>
-                            </Link>
                             <Link to="/shop/sachtruyen/thieunhi">
                                 <ListItem button >
                                     <ListItemIcon>
@@ -78,20 +79,20 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Thiếu nhi"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/shop/sachtruyen/tamly">
+                            <Link to="/shop/vanphongpham/hocsinh">
                                 <ListItem button >
                                     <ListItemIcon>
-                                        <RecordVoiceOverIcon />
+                                        <LocalMallOutlinedIcon />
                                     </ListItemIcon>
-                                    <ListItemText primary="Tâm lý kĩ năng"/>
+                                    <ListItemText primary="Đồ dùng học sinh"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/shop/sachtruyen/kinhte">
+                            <Link to="/shop/sachtruyen/vanhoc/ngontinh">
                                 <ListItem button >
                                     <ListItemIcon>
-                                        <MonetizationOnOutlinedIcon />
+                                        <AssignmentIcon />
                                     </ListItemIcon>
-                                    <ListItemText primary="Kinh tế"/>
+                                    <ListItemText primary="Ngôn tình"/>
                                 </ListItem>
                             </Link>
                         </List>
@@ -121,41 +122,20 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Tiểu thuyết"/>
                                 </ListItem>
                             </Link>
-                            
-                            <Link to="/shop/sachtruyen/vanhoc/truyenngan">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <ShortTextIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Truyện ngắn"/>
-                                </ListItem>
-                            </Link>
-                            <Link to="/shop/sachtruyen/vanhoc/lightnovel">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <EmojiEmotionsIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Light Novel"/>
-                                </ListItem>
-                            </Link>
-                            <Link to="/shop/sachtruyen/vanhoc/ngontinh">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <AssignmentIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Ngôn tình"/>
-                                </ListItem>
-                            </Link>
-                            
-                        </List>
-                        <Divider />
-                        <List>
                             <Link to="/shop/sachtruyen/giaokhoathamkhao">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <LocalLibraryIcon />
                                     </ListItemIcon>
                                     <ListItemText primary="Giáo khoa, Tham Khảo"/>
+                                </ListItem>
+                            </Link>
+                            <Link to="/shop/sachtruyen/vanhoc/truyenngan">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <ShortTextIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Truyện ngắn"/>
                                 </ListItem>
                             </Link>
                             <Link to="/shop/sachtruyen/tieusuhoiky">
@@ -166,6 +146,17 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Tiểu sử, Hồi ký"/>
                                 </ListItem>
                             </Link>
+                            <Link to="/shop/sachtruyen/kinhte">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <MonetizationOnOutlinedIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Kinh tế"/>
+                                </ListItem>
+                            </Link>
+                        </List>
+                        <Divider />
+                        <List>
                             <Link to="/shop/vanphongpham/sanphamvegiay/vo">
                                 <ListItem button >
                                     <ListItemIcon>
@@ -174,14 +165,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Vở viết các loại"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/shop/vanphongpham/hocsinh">
-                                <ListItem button >
-                                    <ListItemIcon>
-                                        <LocalMallOutlinedIcon />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Đồ dùng học sinh"/>
-                                </ListItem>
-                            </Link>
+                            
                             <Link to="/shop/vanphongpham/vanphong">
                                 <ListItem button >
                                     <ListItemIcon>
@@ -197,6 +181,23 @@ class ShopSideBar extends Component {
                                         <BorderColorOutlinedIcon />
                                     </ListItemIcon>
                                     <ListItemText primary="Đồ gốm"/>
+                                </ListItem>
+                            </Link>
+                            <Link to="/shop/sachtruyen/tamly">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <RecordVoiceOverIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Tâm lý kĩ năng"/>
+                                </ListItem>
+                            </Link>
+                            
+                            <Link to="/shop/sachtruyen/vanhoc/lightnovel">
+                                <ListItem button >
+                                    <ListItemIcon>
+                                        <EmojiEmotionsIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Light Novel"/>
                                 </ListItem>
                             </Link>
                         <Divider />
