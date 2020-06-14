@@ -30,7 +30,7 @@ const Receipts = loadable(() => import('./components/Pages/Admin/Receipts'))
 const AdminWrapper = loadable(() => import('./components/AdminWrapper'))
 const LoginWrapper = loadable (() => import('./components/LoginWrapper'))
 
-const ShopCategory = loadable(() => import('./components//Pages/ShopCategory'))
+const ShopCategory = loadable(() => import('./components/Pages/ShopCategory'))
 
 
 
