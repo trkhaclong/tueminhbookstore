@@ -24,9 +24,9 @@ class HomeShop extends Component {
             else if(this.props.type === 3)
                 return(product.category2 === this.props.cate)
             else if(this.props.type === 4)
-                return(product.author === this.props.cate)
+                return(product.category4 === this.props.cate)
             else
-                return(product.supplier === this.props.cate)
+                return(product.category5 === this.props.cate)
         });
 
         return(
@@ -35,7 +35,7 @@ class HomeShop extends Component {
                 <div>
                     <div className="tabslider-header">
                         <div className="tabslider-title girdslider-title-aaa">
-                            {this.props.cate}
+                            {this.props.name}
                         </div>
                     </div>
                     <div className="tab_container">

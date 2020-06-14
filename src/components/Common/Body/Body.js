@@ -49,32 +49,32 @@ const icons = [
     {img: searchIcon, caption: 'Gợi ý cho bạn', link: '/shop'},
     {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com/1723023664478547'},
     {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
-    {img: penIcon, caption: 'Văn phòng phẩm', link: '/van-phong-pham'},
-    {img: bookIcon, caption: 'Văn học', link: '/sach-trong-nuoc/van-hoc'},
-    {img: childIcon, caption: 'Thiếu nhi', link: '/thieu-nhi'},
-    {img: simpsonIcon, caption: 'Tâm lý', link: '/sach-trong-nuoc/tam-ly'},
-    {img: mindIcon, caption: 'Kinh tế', link: '/sach-trong-nuoc/kinh-te'},
+    {img: penIcon, caption: 'Văn phòng phẩm', link: '/shop/vanphongpham'},
+    {img: bookIcon, caption: 'Văn học', link: '/shop/sachtruyen/vanhoc'},
+    {img: childIcon, caption: 'Thiếu nhi', link: '/shop/sachtruyen/thieunhi'},
+    {img: simpsonIcon, caption: 'Tâm lý', link: '/shop/sachtruyen/tamly'},
+    {img: mindIcon, caption: 'Kinh tế', link: '/shop/sachtruyen/kinhte'},
 ];
 
 const cates = [
-    {type: 1,cate: 'Sách Trong Nước', link: '/sach-trong-nuoc'},
-    {type: 1,cate: 'Truyện Tranh', link: '/truyen-tranh'},
-    {type: 1,cate: 'Đồ Chơi', link: '/do-choi'},
-    {type: 1,cate: 'VPP Dụng Cụ Học Sinh', link: '/van-phong-pham'},
+    {type: 1,name: 'Sách Truyện',cate: 'sachtruyen', link: '/shop/sachtruyen'},
+    {type: 1,name: 'Truyện Tranh',cate: 'truyentranh', link: '/shop/truyentranh'},
+    {type: 1,cate: 'Đồ Chơi',cate: 'dochoi', link: '/shop/dochoi'},
+    {type: 1,cate: 'VPP Dụng Cụ Học Sinh',cate: 'vanphongpham', link: '/shop/vanphongpham'},
     
 ];
 
 const authors = [
-    {name: 'Paulo Coelho', link: '/author/paulo-coelho', img: peopleimage1},
-    {name: 'Nguyễn Nhật Ánh', link: '/author/nguyen-nhat-anh', img: peopleimage2},
-    {name: 'J.K Rowling', link: '/author/jk-rowling', img: peopleimage3},
+    {name: 'Paulo Coelho', link: '/author/paulocoelho', img: peopleimage1},
+    {name: 'Nguyễn Nhật Ánh', link: '/author/nguyennhatanh', img: peopleimage2},
+    {name: 'J.K Rowling', link: '/author/jkrowling', img: peopleimage3},
     
 ];
 
 const bestbooks = [
-    {name: 'Conan', link: 'shop/truyen-tranh/truyen-tranh-nhat-ban/trinh-tham/conan', img: bestbook1},
-    {name: 'Tam quốc diễn nghĩa', link: './sach-trong-nuoc/van-hoc/tieu-thuyet/tam-quoc', img: bestbook2},
-    {name: 'Shin - Cậu bé bút chì', link: '.truyen-tranh/truyen-tranh-nhat-ban/thieu-nhi/shin', img: bestbook3},
+    {name: 'Conan', link: 'shop/truyentranh/truyentranhnhatban/conan', img: bestbook1},
+    {name: 'Tam quốc diễn nghĩa', link: '/shop/sachtruyen/vanhoc/tieuthuyet/tamquoc', img: bestbook2},
+    {name: 'Shin - Cậu bé bút chì', link: '/shop/truyentranh/truyentranhnhatban/shin', img: bestbook3},
 ]
 
 class Body extends Component {

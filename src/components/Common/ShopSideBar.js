@@ -46,7 +46,7 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
-                            <Link to="/do-choi">
+                            <Link to="/shop/dochoi">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <ToysIcon />
@@ -54,7 +54,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Đồ chơi"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-phong-pham">
+                            <Link to="/shop/vanphongpham">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <EventSeat />
@@ -62,7 +62,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Văn phòng phẩm"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc">
+                            <Link to="/shop/vanhoc">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <BookIcon />
@@ -70,7 +70,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Văn học"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/thieu-nhi">
+                            <Link to="/shop/sachtruyen/thieunhi">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <ChildIcon />
@@ -78,7 +78,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Thiếu nhi"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/tam-ly">
+                            <Link to="/shop/sachtruyen/tamly">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <RecordVoiceOverIcon />
@@ -86,7 +86,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Tâm lý kĩ năng"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/kinh-te">
+                            <Link to="/shop/sachtruyen/kinhte">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <MonetizationOnOutlinedIcon />
@@ -97,7 +97,7 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
-                            <Link to="/truyen-tranh">
+                            <Link to="/shop/truyentranh">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <ImageIcon />
@@ -105,7 +105,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Truyện tranh"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc">
+                            <Link to="/shop/sachtruyen/vanhoc">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <SortByAlphaIcon />
@@ -113,7 +113,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Truyện chữ"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc/tieu-thuyet">
+                            <Link to="/shop/sachtruyen/vanhoc/tieuthuyet">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <LibraryBooksIcon />
@@ -121,7 +121,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Tiểu thuyết"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc/ngon-tinh">
+                            <Link to="/shop/sachtruyen/vanhoc/ngontinh">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <AssignmentIcon />
@@ -129,7 +129,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Ngôn tình"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc">
+                            <Link to="/shop/vanhoc/truyenngan">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <ShortTextIcon />
@@ -137,7 +137,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Truyện ngắn"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/van-hoc/ngon-tinh">
+                            <Link to="/shop/vanhoc/ngontinh">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <EmojiEmotionsIcon />
@@ -148,7 +148,7 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
-                            <Link to="/giao-khoa-tham-khao">
+                            <Link to="/shop/sachtruyen/giaokhoathamkhao">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <LocalLibraryIcon />
@@ -156,7 +156,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Sách giáo khoa"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/giao-khoa-tham-khao">
+                            <Link to="/shop/sachtruyen/giaokhoathamkhao">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <LocalLibraryOutlinedIcon />
@@ -164,7 +164,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Sách tham khảo"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/san-pham-ve-giay/vo-viet-cac-loai">
+                            <Link to="/shop/sanphamvegiay/vo">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <MenuBookTwoToneIcon />
@@ -172,7 +172,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Vở viết các loại"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/dung-cu-hoc-sinh">
+                            <Link to="/shop/vanphongpham/hocsinh">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <LocalMallOutlinedIcon />
@@ -180,7 +180,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Đồ dùng học sinh"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/dung-cu-hoc-sinh/dung-cu-hoc-tap">
+                            <Link to="/shop/vanphongpham/hocsinh/dungcuhoctap">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <BorderColorOutlinedIcon />
@@ -188,7 +188,7 @@ class ShopSideBar extends Component {
                                     <ListItemText primary="Dụng cụ học tập"/>
                                 </ListItem>
                             </Link>
-                            <Link to="/dung-cu-van-phong">
+                            <Link to="/shop/vanphongpham/vanphong">
                                 <ListItem button >
                                     <ListItemIcon>
                                         <CakeIcon />
@@ -199,7 +199,7 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
-                            <Link to="/tuyen-tap">
+                            <Link to="/shop/tuyentap">
                                 <ListItem button>
                                     <ListItemIcon>
                                         <AirlineSeatFlatIcon />
@@ -210,7 +210,7 @@ class ShopSideBar extends Component {
                         </List>
                         <Divider />
                         <List>
-                            <Link to="/san-pham-khac">
+                            <Link to="/shop/vanphongpham/sanphamkhac">
                                 <ListItem button>
                                     <ListItemIcon>
                                         <SmokeFreeIcon />
