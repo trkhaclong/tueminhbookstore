@@ -1,8 +1,5 @@
 
 const defaultState = {
-    posts: [],
-    postCount: 0,
-    post: {},
     products: [],
     product: {},
     productCount: 0,
@@ -12,30 +9,6 @@ const defaultState = {
 
 const site = (state = defaultState, action) => {
     switch(action.type){
-        case 'GOT_POST_COUNT':
-            return {
-                ...state,
-                postCount: action.payload
-            }
-        case 'GOT_SITE_POSTS':
-            return {
-                ...state,
-                posts: action.skip ? state.posts.concat(action.payload) : action.payload
-            }
-        case 'SET_DEFAULT_POST_DATA':
-            return {
-                ...state,
-                post: action.payload
-            }
-        case 'SET_FULL_POST_DATA': {
-            return {
-                ...state,
-                post: {
-                    ...state.post,
-                    ...action.payload
-                }
-            }
-        }
         case 'GOT_PRODUCT_COUNT':
             return {
                 ...state,

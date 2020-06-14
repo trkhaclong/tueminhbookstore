@@ -4,34 +4,40 @@ import {connect} from 'react-redux';
 
 import '../src/components/assets/loader';
 import './components/assets/css/page.css';
+import loadable from '@loadable/component';
 
-import ErPage from './components/Pages/ErPage';
-import Home from './components/Pages/Home';
-import Shop from './components/Pages/Shop';
-import Blog from './components/Pages/Blog';
-import Single from './components/Pages/Single';
-import SingleProduct from './components/Pages/SingleProduct';
-
-import SignUp from './components/Pages/SignUp';
-import Login from './components/Pages/Login';
-
-//Admin Pages
-import Dashboard from './components/Pages/Admin/DashBoard';
-import Posts from './components/Pages/Admin/Posts';
-import Users from './components/Pages/Admin/Users';
-import AddPost from './components/Pages/Admin/AddPost';
-import Products from './components/Pages/Admin/Products';
-import AddProduct from './components/Pages/Admin/AddProduct';
-import Receipts from './components/Pages/Admin/Receipts';
-
-
-import AdminWrapper from './components/AdminWrapper';
-import LoginWrapper from './components/LoginWrapper';
 import PageWrapper from './components/PageWrapper';
 
 import Footer from './components/Common/Footer';
 
-import ShopCategory from './components//Pages/ShopCategory';
+const ErPage = loadable(() => import('./components/Pages/ErPage'))
+
+const Home = loadable(() => import('./components/Pages/Home'))
+const Shop = loadable(() => import('./components/Pages/Shop'))
+const SingleProduct = loadable(() => import ('./components/Pages/SingleProduct'))
+
+const SignUp = loadable(() => import('./components/Pages/SignUp'))
+const Login = loadable(() => import('./components/Pages/Login'))
+
+//Admin Pages
+const Dashboard = loadable(() => import('./components/Pages/Admin/DashBoard'))
+const Users = loadable(() => import ('./components/Pages/Admin/Users'))
+const Products = loadable(() => import('./components/Pages/Admin/Products'))
+const AddProduct = loadable(() => import ('./components/Pages/Admin/AddProduct'))
+const Receipts = loadable(() => import('./components/Pages/Admin/Receipts'))
+
+
+const AdminWrapper = loadable(() => import('./components/AdminWrapper'))
+const LoginWrapper = loadable (() => import('./components/LoginWrapper'))
+
+const ShopCategory = loadable(() => import('./components//Pages/ShopCategory'))
+
+
+
+
+
+
+
 
 class App extends Component {
 
@@ -39,6 +45,8 @@ class App extends Component {
   render(){
     return (
         <Router>
+
+          
 
           <Route
             path='/admin/users'
@@ -135,72 +143,6 @@ class App extends Component {
                 {this.props.auth.token ?
                   <AdminWrapper>
                     <Products />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-              }
-              </div>
-              
-              )
-            }}
-          />
-
-          <Route
-            path='/admin/posts/:view/:id'
-            exact={true}
-            render={props => {
-              return (
-                <div>
-                  {this.props.auth.token ?
-                  <AdminWrapper>
-                    <AddPost />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-                }
-                </div>
-              )
-            }}
-          />
-
-          <Route
-            path='/admin/posts/:view'
-            exact={true}
-            render={props => {
-              return (
-                <div>
-                  {this.props.auth.token ?
-                  <AdminWrapper>
-                    <AddPost />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-                }
-                </div>
-              )
-            }}
-          />
-          <Route
-            path='/admin/posts'
-            exact={true}
-            render={props => {
-              return(
-                <div>
-                {this.props.auth.token ?
-                  <AdminWrapper>
-                    <Posts />
                   </AdminWrapper>
                 :
                 <PageWrapper>
@@ -321,7 +263,7 @@ class App extends Component {
               </PageWrapper>
             )}
           />
-          <Route 
+          <Route
             exact={true}
             path="/shop/:category/:category1"
             render={props => (
@@ -352,29 +294,6 @@ class App extends Component {
               </PageWrapper>
             )}
           />
-                    
-
-          <Route 
-            exact={true}
-            path="/blogs"
-            render={props => (
-              <PageWrapper>
-                <Blog {...props} />
-                <Footer />
-              </PageWrapper>
-            )}
-          />
-
-          <Route 
-            exact={true}
-            path="/blogs/:slug"
-            render={props => (
-              <PageWrapper>
-                <Single {...props} />
-                <Footer />
-              </PageWrapper>
-            )}
-          />
 
           <Route
             exact={true}
@@ -386,6 +305,7 @@ class App extends Component {
               </PageWrapper>
             )}
           />
+          
         </Router>
     );
   }
