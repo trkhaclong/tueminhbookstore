@@ -35,14 +35,6 @@ class Sidebar extends Component {
                         <ListItemText primary="Products" />
 
                 </ListItemLink>
-                <ListItemLink to="/admin/posts">
-
-                        <ListItemIcon>
-                            <FileCopyIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Posts" />
-
-                </ListItemLink>
                 <ListItemLink to="/admin/users">
 
                         <ListItemIcon>

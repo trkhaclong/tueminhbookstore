@@ -121,7 +121,7 @@ class Login extends Component {
                                         </button>
                                     </div>
                                     <div className="col-md-12 submit" >					
-                                        <button style={{background: '#ffffff',paddingBottom: '30px'}} name="submitcreate" id="submitcreate" type="submit" className="btn-login">
+                                        <button style={{background: '#ffffff',paddingBottom: '30px'}} className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
                                                 Log in with Zalo

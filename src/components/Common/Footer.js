@@ -96,10 +96,10 @@ class Footer extends Component {
 											</div>
 											<div className="footer-static-content">
 												<ul>
-													<li className="first"><Link to="/dieu-khoan-su-dung">Điều khoản sử dụng</Link></li>
-													<li><Link to="/chinh-sach-bao-mat">Chính sách bảo mật</Link></li>
-													<li><Link to="/gioi-thieu-tueminh">Giới thiệu Tuệ Minh</Link></li>
-													<li className="last"><Link to="/he-thong-trung-tam-nha-sach">Hệ thống trung tâm - nhà sách</Link></li>
+													<li className="first"><Link to="/">Điều khoản sử dụng</Link></li>
+													<li><Link to="/">Chính sách bảo mật</Link></li>
+													<li><Link to="/">Giới thiệu Tuệ Minh</Link></li>
+													<li className="last"><Link to="/">Hệ thống trung tâm - nhà sách</Link></li>
 												</ul>
 											</div>
 										</div>
@@ -109,10 +109,10 @@ class Footer extends Component {
 											</div>
 											<div className="footer-static-content ">
 												<ul>
-													<li className="first"><Link to="/doi-tra-hang">Chính sách đổi - trả - hoàn tiền</Link></li>
-													<li><Link to="/chinh-sach-khach-si">Chính sách khách sỉ</Link></li>
-													<li><Link to="/phuong-thuc-van-chuyen">Phương thức vận chuyển</Link></li>
-													<li className="last"><Link to="/huong-dan-thanh-toan">Phương thức thanh toán</Link></li>
+													<li className="first"><Link to="/">Chính sách đổi - trả - hoàn tiền</Link></li>
+													<li><Link to="/">Chính sách khách sỉ</Link></li>
+													<li><Link to="/">Phương thức vận chuyển</Link></li>
+													<li className="last"><Link to="/">Phương thức thanh toán</Link></li>
 												</ul>
 											</div>
 										</div>
@@ -124,11 +124,11 @@ class Footer extends Component {
 												<ul>
 													<li className="first"><Link to="/login" >Đăng
 															nhập/Tạo mới tài khoản</Link></li>
-													<li><Link to="/customer/address">Thay đổi địa chỉ
+													<li><Link to="/">Thay đổi địa chỉ
 															khách hàng</Link></li>
-													<li><Link to="/customer/account">Chi tiết tài
+													<li><Link to="/">Chi tiết tài
 															khoản</Link></li>
-													<li className="last"><Link to="/sales/order/history">Lịch
+													<li className="last"><Link to="/">Lịch
 															sử mua
 															hàng</Link></li>
 												</ul>
