@@ -59,8 +59,8 @@ const icons = [
 const cates = [
     {type: 1,name: 'Sách Truyện',cate: 'sachtruyen', link: '/shop/sachtruyen'},
     {type: 1,name: 'Truyện Tranh',cate: 'truyentranh', link: '/shop/truyentranh'},
-    {type: 1,cate: 'Đồ Chơi',cate: 'dochoi', link: '/shop/dochoi'},
-    {type: 1,cate: 'VPP Dụng Cụ Học Sinh',cate: 'vanphongpham', link: '/shop/vanphongpham'},
+    {type: 1,name: 'Đồ Chơi',cate: 'dochoi', link: '/shop/dochoi'},
+    {type: 1,name: 'VPP Dụng Cụ Học Sinh',cate: 'vanphongpham', link: '/shop/vanphongpham'},
     
 ];
 
