@@ -96,9 +96,9 @@ const contents = [
     },
     {
         name:'Thương Hiệu VPP', link: '/shop/vanphongpham',
-        cate0:'Thương hiệu VN', child0:'Thiên Long', child1: 'Morning Glory', child2: 'Kyobo', child3: 'Artline', child4:'Xem thêm ...',
+        cate0:'THƯƠNG HIỆU VN', child0:'Thiên Long', child1: 'Morning Glory', child2: 'Kyobo', child3: 'Artline', child4:'Xem thêm ...',
         link0: '/shop/vanphongpham', clink0: '/shop/vanphongpham', clink1: '/shop/vanphongpham', clink2: '/shop/vanphongpham', clink3: '/shop/vanphongpham',
-        cate1: 'Thương hiệu nước ngoài',child10: 'Stabilo', child11: 'Maped', child12: 'Bantex', child13: 'Faber', child14: 'Xem thêm ...',
+        cate1: 'THƯƠNG HIỆU NƯỚC NGOÀI',child10: 'Stabilo', child11: 'Maped', child12: 'Bantex', child13: 'Faber', child14: 'Xem thêm ...',
         link1: '/shop/vanphongpham', clink10: '/shop/vanphongpham', clink11: '/shop/vanphongpham', clink12: '/shop/vanphongpham', clink13: '/shop/vanphongpham',
     },
     {
