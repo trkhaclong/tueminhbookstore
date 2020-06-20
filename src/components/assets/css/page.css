@@ -27230,28 +27230,28 @@ select::-ms-expand{
         width: 155px !important;
     }
 }
-@media (max-width: 500px) and (min-width: 400px){
-    .sl-width {
-        width: 155px !important;
-    }
-    .tmshop .sl-width {
-        width: 196px !important;
-    }
-}
-@media (max-width: 400px) and (min-width: 355px){
-    .sl-width {
-        width: 135px !important;
-    }
-    .tmshop .sl-width {
-        width: 176px !important;
-    }
-}
-@media (max-width: 355px) {
+@media (max-width: 500px) {
     .sl-width {
         width: 115px !important;
     }
     .tmshop .sl-width {
         width: 146px !important;
+    }
+}
+@media (max-width: 415px) and (min-width: 410px){
+    .sl-width {
+        width: 160px !important;
+    }
+    .tmshop .sl-width {
+        width: 196px !important;
+    }
+}
+@media (max-width: 376px) and (min-width: 359px){
+    .sl-width {
+        width: 135px !important;
+    }
+    .tmshop .sl-width {
+        width: 175px !important;
     }
 }
 @media (max-width: 1200px){
