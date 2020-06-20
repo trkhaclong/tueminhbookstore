@@ -65,7 +65,7 @@ class SingleProduct extends Component {
                                 <div ><LocalMallIcon fontSize="large" /></div>
                                 <span>Thêm vào giỏ hàng</span>
                             </button>
-                            <button type="button" title="mua ngay" className="btn-buy-now">
+                            <button onClick={e => this.props.addToCart(this.props.site.product)} type="button" title="mua ngay" className="btn-buy-now">
                                 <span>Mua Ngay</span>
                             </button>
                         </div>

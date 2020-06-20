@@ -27212,6 +27212,11 @@ select::-ms-expand{
         width: 475px !important;
     }
 }
+@media (max-width: 700) {
+    .tmcartsubmit {
+        width: 100%;
+    }
+}
 @media (max-width: 660px) and (min-width: 500px) {
     .product-view .product-img-box .price-box{
     }

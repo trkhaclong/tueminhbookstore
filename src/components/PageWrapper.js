@@ -177,7 +177,7 @@ const styles = theme => ({
     },
     cartDrawer: {
         width: '70%',
-        [theme.breakpoints.up('xs')]: {
+        [theme.breakpoints.up('md')]: {
             width: '30%'
         }
     },

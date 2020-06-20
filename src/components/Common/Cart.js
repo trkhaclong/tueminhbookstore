@@ -234,7 +234,7 @@ class Cart extends Component {
                     open={this.state.open}
                     onClose={this.toggleDrawer}
                 >
-                    <div className="container" style={{backgroundColor: 'white'}}>
+                    <div className="container tmcartsubmit" style={{backgroundColor: 'white'}}>
                         <form onSubmit={e => {
                             e.preventDefault();
                             const receipt = {
