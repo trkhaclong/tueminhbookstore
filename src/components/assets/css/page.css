@@ -27212,7 +27212,7 @@ select::-ms-expand{
         width: 475px !important;
     }
 }
-@media (max-width: 700) {
+@media (max-width: 700px) {
     .tmcartsubmit {
         width: 100%;
     }
