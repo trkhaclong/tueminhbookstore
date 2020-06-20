@@ -130,7 +130,10 @@ const styles = theme => ({
     inputText: {
         width: '250px',
         marginBottom: '0px',
-        marginRight: '50px'
+        marginRight: '0px',
+        [theme.breakpoints.up('md')]: {
+            marginRight: '50px',
+        }
     },
     typography: {
         padding: theme.spacing(2),
