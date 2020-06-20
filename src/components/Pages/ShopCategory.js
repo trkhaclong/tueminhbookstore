@@ -43,7 +43,7 @@ const styles = theme => ({
         width: '100%'
     },
     shopdrawer: {
-        width: '20%'
+        width: '12%'
     },
     fab: {
         position: 'fixed',
