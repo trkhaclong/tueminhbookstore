@@ -79,7 +79,7 @@ class Login extends Component {
                                         )
                                     })}
                                     <p className="lost-password form-group">
-                                        <a alt="" rel="nofollow">Quên mật khẩu?</a>
+                                        <a href="#" alt="" rel="nofollow">Quên mật khẩu?</a>
                                     </p> 
                                     <div className="col-md-12">					
                                         <button className="btn-login" name="submitcreate" id="submitcreate" type="submit" style={{float:'left', marginBottom: '15px'}}>

@@ -99,7 +99,7 @@ class Shop extends Component {
                     </div>
                 </div>
                 <div className="container">
-                    <div className="row">
+                    <div className="row tmshop">
                         {this.props.site.products ?
                             this.props.site.products.length > 0 ?
                                 this.props.site.products.map((product, i) => {

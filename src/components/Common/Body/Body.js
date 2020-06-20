@@ -46,7 +46,7 @@ const banners = [
 const icons = [
     {img: storeIcon, caption: 'Cửa hàng', link: '/shop'},
     {img: saleIcon, caption: 'Sale', link: '/shop'},
-    {img: searchIcon, caption: 'Gợi ý cho bạn', link: '/shop'},
+    {img: searchIcon, caption: 'Gợi ý', link: '/shop'},
     {img: facebookIcon, caption: 'facebuck', link: 'https://facebook.com/1723023664478547'},
     {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
     {img: penIcon, caption: 'Văn phòng phẩm', link: '/shop/vanphongpham'},

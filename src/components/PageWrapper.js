@@ -176,7 +176,10 @@ const styles = theme => ({
     mobileMenu: {
     },
     cartDrawer: {
-        width: '30%'
+        width: '70%',
+        [theme.breakpoints.up('xs')]: {
+            width: '30%'
+        }
     },
     profile: {
         margin: '0',

@@ -69,19 +69,19 @@ class Footer extends Component {
 											
 										</div>
 										<div align="left" style={{fontSize:'14.5px', marginBottom:'20px', marginTop:'10px', padding: '0px', textAlign: 'left', marginLeft: '10px'}}>
-											<a target="_blank" href="https://www.facebook.com/1723023664478547/" title="Facebook">
+											<a href="https://www.facebook.com/1723023664478547/" title="Facebook">
 												<img  alt="Facebook" src={facebookicon} />
 											</a>
-											<a target="_blank" href="https://www.instagram.com/deep.tried/" title="Instagram">
+											<a href="https://www.instagram.com/deep.tried/" title="Instagram">
 												<img style={{marginLeft: '24px'}} alt="Instagram" src={instaicon} />
 											</a>
-											<a target="_blank" href="https://www.youtube.com/channel/" title="Youtube">
+											<a href="https://www.youtube.com/channel/" title="Youtube">
 												<img style={{marginLeft: '24px'}} alt="Youtube" src={youtubeicon} />
 											</a>
-											<a target="_blank" href="https://tumblr.com/" title="Tumblr">
+											<a href="https://tumblr.com/" title="Tumblr">
 												<img style={{marginLeft: '24px'}} alt="Tumblr" src={tumblricon} />
 											</a>
-											<a target="_blank" href="https://twitter.com/" title="Twitter">
+											<a href="https://twitter.com/" title="Twitter">
 												<img style={{marginLeft: '24px'}} alt="Twitter" src={twittericon} />
 											</a>
 										</div>

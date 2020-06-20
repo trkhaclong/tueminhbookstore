@@ -46,7 +46,7 @@ class Sidebar extends Component {
                 <ListItemLink to="/admin/receipts">
 
                         <ListItemIcon>
-                            <FaceIcon />
+                            <FileCopyIcon />
                         </ListItemIcon>
                         <ListItemText primary="Receipts" />
  

@@ -12,6 +12,11 @@
     color: #222;
     font: normal normal normal 1rem/1.6 Nunito Sans, Helvetica, Arial, sans-serif;
 }
+@media (max-width: 600px) {
+    .slider-header {
+        padding-right: 0px;
+    }
+}
 #ves-verticalmenu{
     right: 0px;
 }

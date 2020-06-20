@@ -4,8 +4,8 @@ import {withStyles} from '@material-ui/core/styles';
 import * as AdminActions from '../../../store/actions/adminActions';
 import Paper from '@material-ui/core/Paper';
 
-import {withFormik, Field, Form} from 'formik';
-import {FormikTextField, FormikSelectField} from 'formik-material-fields';
+import {withFormik, Form} from 'formik';
+import {FormikTextField} from 'formik-material-fields';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 import ImageIcon from '@material-ui/icons/Image';
@@ -53,7 +53,6 @@ class AddProduct extends Component {
 
     componentDidUpdate(props, state){
         if(this.props.match.params.view === 'add' && this.props.admin.products.filter(p => p.title === this.props.values.title).length >0){
-            const product = this.props.admin.products.filter(p => p.title === this.props.values.title)[0];
         }
 
         if(this.props.admin.product.id !== props.admin.product.id){
@@ -198,7 +197,7 @@ class AddProduct extends Component {
                         </div>
                         {this.props.admin.product.ProductImage ?
                             this.props.admin.product.ProductImage.length > 0 ?
-                                <img src={API.makeFileURL(this.props.admin.product.ProductImage[0].url, this.props.auth.token)} className={classes.productsImage} />
+                                <img src={API.makeFileURL(this.props.admin.product.ProductImage[0].url, this.props.auth.token)} className={classes.productsImage} alt="" />
                             :null
                         : null}
                         <div>

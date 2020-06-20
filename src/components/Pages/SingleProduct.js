@@ -78,7 +78,7 @@ class SingleProduct extends Component {
                             <div className="product-view-sa_one">
                                 <div className="product-view-sa-supplier">
                                     <span>Nhà cung cấp:</span>
-                                    <a alt="">{this.props.site.product.supplier}</a>
+                                    <a href="" alt="">{this.props.site.product.supplier}</a>
                                 </div>
                                 <div className="product-view-sa-author">
                                     <span>Tác Giả:</span>
@@ -88,7 +88,7 @@ class SingleProduct extends Component {
                             <div className="product-view-sa_two">
                                 <div className="product-view-sa-supplier">
                                     <span>Nhà xuất bản:</span>
-                                    <a alt="">{this.props.site.product.publishing}</a>
+                                    <a href="" alt="">{this.props.site.product.publishing}</a>
                                 </div>
                                 <div className="product-view-sa-author">
                                     <span>Tồn kho:</span>
@@ -117,7 +117,7 @@ class SingleProduct extends Component {
                             <div className="col-md-6 price-block-right">
                                 <ul className="add-to-links">
                                     <li>
-                                        <a alt="" className="link-wishlist-icon">
+                                        <a href="" alt="" className="link-wishlist-icon">
                                             <FavoriteIcon fontSize="large" color="secondary" />
                                         </a>
                                     </li>
@@ -191,11 +191,11 @@ class SingleProduct extends Component {
                             <div className="product-view-quantity-box">
                                 <label htmlFor="qty">Số lượng:</label>
                                 <div className="product-view-quantity-box-block">
-                                    <a className="btn-subtract-qty" alt="">
+                                    <a href="" className="btn-subtract-qty" alt="">
 
                                     </a>
                                     <input readOnly type="text" name="qty" id="qty" maxLength="12" align="center" value="1"  title="SL" className="input-text qty"/>
-                                    <a className="btn-add-qty" alt="">
+                                    <a href="" className="btn-add-qty" alt="">
                                         
                                     </a>
                                 </div>
@@ -247,7 +247,7 @@ class SingleProduct extends Component {
                         <div>
                             <ul id="product-view-tab-list" className="product-view-tab">
                                 <li className="product-view-tab-item product-view-tab-info-item">
-                                    <a>Khách hàng nhận xét:</a>
+                                    <a href="" alt="">Khách hàng nhận xét:</a>
                                     <hr />
                                 </li>
                             </ul>
