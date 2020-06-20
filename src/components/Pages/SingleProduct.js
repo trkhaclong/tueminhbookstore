@@ -45,7 +45,7 @@ class SingleProduct extends Component {
                             </div>
                             <div className="swiper-container product-view-image-product-swiper swiper-container-horizontal">
                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide swiper-slide-active" style={{width:'372px'}}>
+                                    <div className="swiper-slide swiper-slide-active" style={{width:'300px'}}>
                                         <div className="swiper-wrapper-item">
                                         {this.props.site.product.ProductImage ?
                                             this.props.site.product.ProductImage.length > 0 ?
