@@ -25908,7 +25908,7 @@ ol.m-parent-category-list li{
 }
 .p-sale-label{    
     margin-top: 0;
-    margin-left: -8px;
+    margin-left: 0px;
     font-size: 16px;
     color: white;                 
     display: block;
@@ -25916,7 +25916,7 @@ ol.m-parent-category-list li{
 }
 .product-view .p-sale-label{
     font-size: 19px;
-    margin-top: 22%;
+    margin-top: 0%;
     margin-left: 0px;
 }
 .discount-l-fs{
@@ -27170,7 +27170,7 @@ select::-ms-expand{
         max-height: 33px;
     }
     .bxslider .p-sale-label{
-        margin-top: 19%;
+        margin-top: 0;
     }
     .ma-timer-title, .catlist-title, .brand-title {
         margin-top: 20px;
@@ -27285,6 +27285,14 @@ select::-ms-expand{
         width: 175px !important;
     }
 }
+@media (max-width: 820px) and (min-width: 800px){
+    .sl-width {
+        width: 125px !important;
+    }
+    .tmshop .sl-width {
+        width: 123px !important;
+    }
+}
 @media (max-width: 1200px){
     .tabsliderNXB{
         height: 70px !important;
@@ -27299,7 +27307,7 @@ select::-ms-expand{
         margin-right: 30px !important;
     }
     .bxslider .p-sale-label{
-        margin-left: -7px;
+        margin-left: 0px;
     }
     .fhs-p-img{
         display: block;
@@ -27428,7 +27436,7 @@ select::-ms-expand{
         margin-top: 10px;
     }
     .sl-width{
-        width: 125px !important;
+        width: 125px;
     }
     .bxslider-grid .item{
         width: 560px !important;
