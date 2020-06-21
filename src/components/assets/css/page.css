@@ -27271,21 +27271,21 @@ select::-ms-expand{
 @media (max-width: 500px) {
     
     .sl-width {
-        width: 135px !important;
+        width: 185px !important;
+    }
+    .tmshop .sl-width {
+        width: 205px !important;
+    }
+}
+@media (max-width: 420px) and (min-width: 390px){
+    .sl-width {
+        width: 155px !important;
     }
     .tmshop .sl-width {
         width: 185px !important;
     }
 }
-@media (max-width: 415px) and (min-width: 410px){
-    .sl-width {
-        width: 160px !important;
-    }
-    .tmshop .sl-width {
-        width: 196px !important;
-    }
-}
-@media (max-width: 376px) and (min-width: 359px){
+@media (max-width: 390px) and (min-width: 350px){
     .sl-width {
         width: 135px !important;
     }
@@ -27293,8 +27293,15 @@ select::-ms-expand{
         width: 175px !important;
     }
 }
-
-@media (max-width: 320px){
+@media (max-width: 350px) and (min-width: 321px){
+    .sl-width {
+        width: 115px !important;
+    }
+    .tmshop .sl-width {
+        width: 145px !important;
+    }
+}
+@media (max-width: 321px){
     .sl-width {
         width: 100px !important;
     }
