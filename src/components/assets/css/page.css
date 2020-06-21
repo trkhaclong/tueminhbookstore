@@ -27303,7 +27303,7 @@ select::-ms-expand{
 }
 @media (max-width: 321px){
     .sl-width {
-        width: 100px !important;
+        width: 95px !important;
     }
     .tmshop .sl-width {
         width: 125px !important;
