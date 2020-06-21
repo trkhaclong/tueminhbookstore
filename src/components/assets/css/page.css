@@ -27271,7 +27271,7 @@ select::-ms-expand{
 @media (max-width: 500px) {
     
     .sl-width {
-        width: 175px !important;
+        width: 172px !important;
     }
     .tmshop .sl-width {
         width: 205px !important;
@@ -27279,7 +27279,7 @@ select::-ms-expand{
 }
 @media (max-width: 420px) and (min-width: 390px){
     .sl-width {
-        width: 155px !important;
+        width: 152px !important;
     }
     .tmshop .sl-width {
         width: 185px !important;
@@ -27287,7 +27287,7 @@ select::-ms-expand{
 }
 @media (max-width: 390px) and (min-width: 350px){
     .sl-width {
-        width: 135px !important;
+        width: 132px !important;
     }
     .tmshop .sl-width {
         width: 175px !important;
@@ -27295,7 +27295,7 @@ select::-ms-expand{
 }
 @media (max-width: 350px) and (min-width: 321px){
     .sl-width {
-        width: 115px !important;
+        width: 112px !important;
     }
     .tmshop .sl-width {
         width: 145px !important;
