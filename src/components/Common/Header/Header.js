@@ -11,7 +11,7 @@ import img2 from '../../assets/img/home/2-min.jpg';
 import img3 from '../../assets/img/home/3-min.jpg';
 import img4 from '../../assets/img/home/4-min.jpg';
 import img5 from '../../assets/img/home/5-min.jpg';
-
+import img6 from '../../assets/img/home/6-min.jpg';
 
 const contents = [
     {
@@ -147,7 +147,8 @@ const collections = [
     {src: img2,caption: ""},
     {src: img3,caption: ""},
     {src: img4,caption: ""},
-    {src: img5,caption: ""}
+    {src: img5,caption: ""},
+    {src: img6,caption: ""}
 ];
 
 class Header extends Component {

@@ -109,7 +109,7 @@ const styles = theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         outline: 'none',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('md')]: {
             width: '69%'
         }
     },
@@ -125,7 +125,11 @@ const styles = theme => ({
         transition: 'all 0.3s',
         padding: '8px 0',
         margin: '8px 0',
-        width: '100%'
+        width: '100%',
+        [theme.breakpoints.down('md')]: {
+            padding: '0px 0',
+            margin: '0px 0'
+        }
     },
     inputText: {
         width: '250px',

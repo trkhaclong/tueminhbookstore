@@ -21,7 +21,7 @@ class CartItems extends Component {
                     </p>
                 </div>
                 <div className="shelf-item_price_tm">
-                   <p>{this.props.product.newPrice} </p>
+                   <p>{this.props.product.newPrice} đ</p>
                    <div>
                        {this.props.product.quantity > 1 ?
                             <button onClick={e => this.props.subtractQuantity(this.props.product.id)} className="change-product-button_tm">-</button>
