@@ -159,7 +159,8 @@ class Cart extends Component {
         this.state = {
             open: false,
             anchor: null,
-            halfWidth: 0, halfHeight: 0
+            halfWidth: 0, halfHeight: 0,
+            string: 'Giỏ hàng không được để trống'
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -181,12 +182,23 @@ class Cart extends Component {
         if(this.state.open){
             this.setState({open: false})
         }else{
-            this.setState({open: true})
+            if(this.props.site.total > 0)
+                this.setState({open: true})
+            else this.setState({anchor: event.currentTarget})
         }
     }
 
     handleClick = (event) => {
-        this.setState({anchor: event.currentTarget})
+        if (this.props.values.address){
+            if (this.props.values.phone){
+                this.setState({string: 'Cửa hàng đã nhận hóa đơn của bạn'})
+                this.setState({anchor: event.currentTarget})
+            }else {
+                this.setState({anchor: event.currentTarget})
+            }
+        }else {
+            this.setState({anchor: event.currentTarget})
+        }
     }
     
     handleClose = () => {
@@ -194,7 +206,6 @@ class Cart extends Component {
     }
 
     render(){
-        
         const {classes} = this.props;
         const done = Boolean(this.state.anchor);
         const id = done ? 'receipt done' : undefined;
@@ -229,9 +240,8 @@ class Cart extends Component {
                             <span></span>
                         </small>
                     </div>
-                    {this.props.site.total > 0 ?
                         <div className="buy-btn_tm" onClick={this.toggleDrawer}>Mua ngay</div>
-                    :<div className="buy-btn_tm">Mua ngay</div>}
+                    
                 </div>
                 <Drawer
                     classes={{
@@ -252,72 +262,60 @@ class Cart extends Component {
                             }
                             this.props.payment(receipt);
                         }}>
-                        <div className={classes.sectionDesktop}>
-                            <div className={classes.subtotal}>
-                                <div className={classes.subtotalText}>Thành tiền</div>
-                                <div className={classes.subtotalMoney}>{this.props.site.total} đ</div>
-                            </div>
-                            <div className={classes.subtotal}>
-                                <div className={classes.grandtotalText}>Tổng số tiền</div>
-                                <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
-                            </div>
-                        </div>
-                        <div className={classes.sectionMobile}>
-                            <div className={classes.subtotal}>
-                                <div className={classes.grandtotalText}>Tổng số tiền</div>
-                                <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
-                            </div>
-                        </div>
-                        <Divider />
-                        <div className={classes.subtotal}>
-                            <Link className={classes.back} onClick={this.toggleDrawer}>
-                                <span style={{paddingRight: '8px'}}>
-                                    <ArrowBackIcon />
-                                </span>
-                                <span>Tiếp tục mua sắm</span>
-                            </Link>
-                            <div className={classes.inputText}>
-                                <Field
-                                    {...fields[0]}
-                                    value={this.props.values[fields[0].name]}
-                                    name={fields[0].name}
-                                    onChange={this.props.handleChange}
-                                    onBlur={this.props.handleBlur}
-                                    touched={(this.props.touched[fields[0].name])}
-                                    errors={this.props.errors[fields[0].name]}
-                                />
-                            </div>
-                            <div className={classes.inputText}>
-                                <Field
-                                    {...fields[1]}
-                                    value={this.props.values[fields[1].name]}
-                                    name={fields[1].name}
-                                    onChange={this.props.handleChange}
-                                    onBlur={this.props.handleBlur}
-                                    touched={(this.props.touched[fields[1].name])}
-                                    errors={this.props.errors[fields[1].name]}
-                                />
-                            </div>
-                            <div className={classes.confirmBtn}>
-                                <div className={classes.btnBox}>
-                                    {this.props.values.address ?
-                                        this.props.values.phone ?
-                                            <button onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
-                                                <span>Xác nhận thanh toán</span>
-                                            </button>
-                                        :(
-                                            <button disabled onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
-                                                <span>Xác nhận thanh toán</span>
-                                            </button>
-                                        )
-                                    :(
-                                        <button disabled onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
-                                            <span>Xác nhận thanh toán</span>
-                                        </button>
-                                    )}
+                            <div className={classes.sectionDesktop}>
+                                <div className={classes.subtotal}>
+                                    <div className={classes.subtotalText}>Thành tiền</div>
+                                    <div className={classes.subtotalMoney}>{this.props.site.total} đ</div>
+                                </div>
+                                <div className={classes.subtotal}>
+                                    <div className={classes.grandtotalText}>Tổng số tiền</div>
+                                    <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
                                 </div>
                             </div>
-                        </div>
+                            <div className={classes.sectionMobile}>
+                                <div className={classes.subtotal}>
+                                    <div className={classes.grandtotalText}>Tổng số tiền</div>
+                                    <div className={classes.grandtotalMoney}>{this.props.site.total} đ</div>
+                                </div>
+                            </div>
+                            <Divider />
+                            <div className={classes.subtotal}>
+                                <Link className={classes.back} onClick={this.toggleDrawer}>
+                                    <span style={{paddingRight: '8px'}}>
+                                        <ArrowBackIcon />
+                                    </span>
+                                    <span>Tiếp tục mua sắm</span>
+                                </Link>
+                                <div className={classes.inputText}>
+                                    <Field
+                                        {...fields[0]}
+                                        value={this.props.values[fields[0].name]}
+                                        name={fields[0].name}
+                                        onChange={this.props.handleChange}
+                                        onBlur={this.props.handleBlur}
+                                        touched={(this.props.touched[fields[0].name])}
+                                        errors={this.props.errors[fields[0].name]}
+                                    />
+                                </div>
+                                <div className={classes.inputText}>
+                                    <Field
+                                        {...fields[1]}
+                                        value={this.props.values[fields[1].name]}
+                                        name={fields[1].name}
+                                        onChange={this.props.handleChange}
+                                        onBlur={this.props.handleBlur}
+                                        touched={(this.props.touched[fields[1].name])}
+                                        errors={this.props.errors[fields[1].name]}
+                                    />
+                                </div>
+                                <div className={classes.confirmBtn}>
+                                    <div className={classes.btnBox}>
+                                        <button onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
+                                            <span>Xác nhận thanh toán</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </Drawer>
@@ -336,7 +334,7 @@ class Cart extends Component {
                         horizontal: 'center'
                     }}
                 >
-                    <Typography style={{textAlign: 'center', justifyContent: 'center'}} className={classes.typography}>Cửa hàng đã nhận hóa đơn của bạn<br /><CheckCircleIcon style={{marginTop: '15px'}} color="primary" fontSize="large" /></Typography>
+                    <Typography style={{textAlign: 'center', justifyContent: 'center'}} className={classes.typography}>{this.state.string}<br /><CheckCircleIcon style={{marginTop: '15px'}} color="primary" fontSize="large" /></Typography>
                 </Popover>
             </div>
         )
