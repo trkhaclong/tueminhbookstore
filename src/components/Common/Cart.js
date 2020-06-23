@@ -20,6 +20,7 @@ import {withFormik} from 'formik';
 import * as Yup from 'yup';
 import { Popover, Typography } from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import ErrorIcon from '@material-ui/icons/Error';
 
 const styles = theme => ({
     root: {
@@ -159,6 +160,8 @@ class Cart extends Component {
         this.state = {
             open: false,
             anchor: null,
+            openerr: false,
+            errtext: null,
             halfWidth: 0, halfHeight: 0
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -178,19 +181,35 @@ class Cart extends Component {
     }
     
     toggleDrawer = () => {
-        if(this.state.open){
+        if(this.state.open === false){
+            if(this.props.site.total > 0){
+                this.setState({open: true})
+            } else {
+                this.setState({errtext: 'Giỏ hàng trống thì mua cái gì @@'})
+                this.setState({openerr: true})
+            }
+        } else {
             this.setState({open: false})
-        }else{
-            this.setState({open: true})
         }
     }
 
     handleClick = (event) => {
-        this.setState({anchor: event.currentTarget})
+        if(this.props.values.address){
+            if(this.props.values.phone){
+                this.setState({anchor: event.currentTarget})
+            } else {
+                this.setState({errtext: 'Không có sđt thì giao hàng kiểu gì @@'})
+                this.setState({openerr: true})
+            }
+        } else {
+            this.setState({errtext: 'Không có địa chỉ thì giao đi đâu @@'})
+            this.setState({openerr: true})
+        }
     }
     
     handleClose = () => {
         this.setState({anchor: null})
+        this.setState({openerr: false})
     }
 
     render(){
@@ -229,9 +248,9 @@ class Cart extends Component {
                             <span></span>
                         </small>
                     </div>
-                    {this.props.site.total > 0 ?
+                    
                         <div className="buy-btn_tm" onClick={this.toggleDrawer}>Mua ngay</div>
-                    :<div className="buy-btn_tm">Mua ngay</div>}
+                    
                 </div>
                 <Drawer
                     classes={{
@@ -300,21 +319,9 @@ class Cart extends Component {
                             </div>
                             <div className={classes.confirmBtn}>
                                 <div className={classes.btnBox}>
-                                    {this.props.values.address ?
-                                        this.props.values.phone ?
                                             <button onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
                                                 <span>Xác nhận thanh toán</span>
                                             </button>
-                                        :(
-                                            <button disabled onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
-                                                <span>Xác nhận thanh toán</span>
-                                            </button>
-                                        )
-                                    :(
-                                        <button disabled onClick={this.handleClick} name="submitcreate" id="submitcreate" type="submit" title="Thanh toan" className={classes.btnOrder}>
-                                            <span>Xác nhận thanh toán</span>
-                                        </button>
-                                    )}
                                 </div>
                             </div>
                         </div>
@@ -337,6 +344,24 @@ class Cart extends Component {
                     }}
                 >
                     <Typography style={{textAlign: 'center', justifyContent: 'center'}} className={classes.typography}>Cửa hàng đã nhận hóa đơn của bạn<br /><CheckCircleIcon style={{marginTop: '15px'}} color="primary" fontSize="large" /></Typography>
+                </Popover>
+                <Popover
+                    id={id}
+                    open={this.state.openerr}
+                    onClose={this.handleClose}
+                    anchorReference="anchorPosition"
+                    anchorPosition={{top: this.state.halfHeight, left: this.state.halfWidth}}
+                    anchorOrigin={{
+                        vertical: 'center',
+                        horizontal: 'center'
+                    }}
+                    transformOrigin={{
+                        vertical: 'center',
+                        horizontal: 'center'
+                    }}
+                >
+                    <Typography style={{textAlign: 'center', justifyContent: 'center'}} className={classes.typography}>{this.state.errtext}<br /><ErrorIcon style={{marginTop: '15px'}} color="secondary" fontSize="large" /></Typography>
+
                 </Popover>
             </div>
         )

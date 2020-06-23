@@ -41,6 +41,9 @@ const styles = theme => ({
         display: 'block',
     },
     toolbar: {
+        [theme.breakpoints.down('md')]: {
+            padding: '0',
+        },
     },
     appBar: {
         backgroundColor: 'white',
@@ -88,7 +91,6 @@ const styles = theme => ({
         position: 'relative',
         width: '80px',
         height: '50px',
-        
     },
     titleText: {
         width: `calc(100% - ${logoWidth}px)`,
@@ -111,7 +113,8 @@ const styles = theme => ({
         height: '40px',
         [theme.breakpoints.up('lg')]: {
             marginRight: theme.spacing(2),
-            width: '50%',
+            width: '58%',
+            marginLeft: '69px'
         },
     },
     searchIcon: {

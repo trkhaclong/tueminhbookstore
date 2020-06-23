@@ -4,6 +4,8 @@ import '../../assets/css/body.css';
 
 import {Link} from 'react-router-dom';
 
+import LazyLoad from 'react-lazyload';
+
 import Banner from './Banner';
 import IconMenu from './IconMenu';
 import HomeShop from './HomeShop';
@@ -77,6 +79,11 @@ const bestbooks = [
     {name: 'Tam quốc diễn nghĩa', link: '/shop/sachtruyen/vanhoc/tieuthuyet/tamquoc', img: bestbook2},
     {name: 'Shin - Cậu bé bút chì', link: '/shop/truyentranh/truyentranhnhatban/shin', img: bestbook3},
 ]
+const Loading = () => (
+    <div className="categorytab-slider fhs-grid loading">
+        <h5>Loading ...</h5>
+    </div>
+)
 
 class Body extends Component {
     render(){
@@ -111,9 +118,15 @@ class Body extends Component {
                                     </div>
                                     
                                     <div>
-                                        {cates.map((cate, i) => {
-                                            return <HomeShop {...cate} key={i} />
-                                        })}
+                                        {cates.map((cate, i) => (
+                                            <LazyLoad
+                                                key={i}
+                                                height={100}
+                                                offset={[-100,100]}
+                                            >
+                                                <HomeShop {...cate} key={i} />
+                                            </LazyLoad>
+                                        ))}
                                     </div>
                                     
                                     <div className="cms-top-authors hidden-xs">
