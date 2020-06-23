@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import API from '../../utils/api';
 import * as SiteActions from '../../store/actions/siteActions';
 import {Link} from 'react-router-dom';
-
+import {withStyles} from '@material-ui/core/styles';
 
 import Field from '../Common/Field';
 import ProductPolicy from '../Common/ProductPolicy';
@@ -12,19 +12,49 @@ import ShopItems from '../Common/ShopItems';
 
 import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 import LocalMallIcon from '@material-ui/icons/LocalMallOutlined';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+
 
 const fields = [
     {name: 'address', type: 'text', placeholder: 'Dia chi nhan hang'}
 ]
 
+
+
+const styles = theme => ({
+    FieldSpan: {
+        width: '100%',
+    },
+    field: {
+        paddingLeft:'inherit',
+    },
+    commonText: {
+        paddingLeft:'inherit',
+    },
+    relateItems: {
+        width: '102%',
+        [theme.breakpoints.down('sm')]: {
+            width: '1800px'
+        },
+        position: 'relative',
+        transitionDuration:'0s',
+        transform: 'translate3d(0px, 0px, 0px)',
+        paddingLeft: 0
+    }
+})
+
 class SingleProduct extends Component {
+    
+
+
     componentDidMount(){
         this.props.getSingleProduct(this.props.match.params.id, this.props.auth.token);
         this.props.getCate3Products(0, this.props.site.product.category3);
+        this.props.getProductCount();
     }
 
     render(){
-        const relateW = (this.props.site.products.length)*157;
+        const {classes} = this.props;
         return(
             <div className="main-container col1-layout no-margin-top">
             <div className="single_product-tm">
@@ -158,10 +188,10 @@ class SingleProduct extends Component {
                                 </div>
                                 <div>
                                     <div>
-                                        <span style={{width: '100%'}}>
+                                        <span className={classes.FieldSpan}>
                                         {fields.map((f, i) =>{
                                             return (
-                                                <div style={{paddingLeft:'inherit'}} key={i} className="col-sm-6">
+                                                <div className={classes.field} key={i} className="col-sm-6">
                                                     <Field
                                                         {...f}
                                                     />
@@ -177,7 +207,7 @@ class SingleProduct extends Component {
                                 </div>
                                 <div>
                                     <div>
-                                        <div style={{cursor: 'text', userSelect: 'text'}}>
+                                        <div className={classes.commonText}>
                                             Đổi trả sản phẩm trong&nbsp;30&nbsp;ngày
                                         </div>
                                         <div id="expected_return_product_policy_info" >
@@ -224,7 +254,7 @@ class SingleProduct extends Component {
                                     <div id="tabcbs-recommendated-products" className="tab_content_recommendated-products" style={{minHeight: '400px'}}>
                                         <div className="bx-wrapper" style={{maxWidth: 'inherit'}}>
                                             <div className="bx-viewport" aria-live="polite" style={{width: '100%', overflow: 'auto', position: 'relative', height: '328px'}}>
-                                                <ul className="bxslider" style={{width: `${relateW}px`, position: 'relative', transitionDuration:'0s', transform: 'translate3d(0px, 0px, 0px)'}}>
+                                                <ul className={classes.relateItems}>
                                                 {this.props.site.products.map((product, i) => {
                                                     return(
                                                         <ShopItems 
@@ -316,10 +346,13 @@ const mapDispatchToProps = dispatch => ({
     },
     addToCart: (product) => {
         dispatch(SiteActions.addToCart(product));
+    },
+    getProductCount: () => {
+        dispatch(SiteActions.getProductCount())
     }
 })
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SingleProduct);
+)((withStyles(styles)(SingleProduct)));
