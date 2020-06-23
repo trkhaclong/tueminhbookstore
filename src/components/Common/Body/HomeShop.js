@@ -7,11 +7,11 @@ import ShopItems from '../ShopItems';
 import '../../assets/css/blog.css';
 import LazyLoad from 'react-lazyload';
 
-const Loading = () => {
+const Loading = () => (
     <div className="item sl-width loading">
         <h5>loading...</h5>
     </div>
-}
+)
 
 class HomeShop extends Component {
 
@@ -55,7 +55,7 @@ class HomeShop extends Component {
                                                     key={i}
                                                     height={100}
                                                     offset={[-100,100]}
-                                                    placeholder={<Loading />}
+                                                    placeholder={<Loading />} 
                                                 >
                                                 <ShopItems
                                                     product={product}
