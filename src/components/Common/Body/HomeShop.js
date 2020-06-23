@@ -4,9 +4,14 @@ import {withRouter, Link} from 'react-router-dom';
 import * as SiteActions from '../../../store/actions/siteActions';
 import ShopItems from '../ShopItems';
 
-import '../../assets/css/blog.css'
+import '../../assets/css/blog.css';
+import LazyLoad from 'react-lazyload';
 
-
+const Loading = () => {
+    <div className="item sl-width loading">
+        <h5>loading...</h5>
+    </div>
+}
 
 class HomeShop extends Component {
 
@@ -46,11 +51,17 @@ class HomeShop extends Component {
                                 <ul className="bxslider">
                                         {homeshop.slice(0, 10).map((product, i) => {
                                             return(
-                                                        <ShopItems
-                                                        product={product}
-                                                        key={i}
-                                                        />
-                                                
+                                                <LazyLoad
+                                                    key={i}
+                                                    height={100}
+                                                    offset={[-100,100]}
+                                                    placeholder={<Loading />}
+                                                >
+                                                <ShopItems
+                                                    product={product}
+                                                    key={i}
+                                                />
+                                                </LazyLoad>
                                             )
                                         })}
                                 </ul>
