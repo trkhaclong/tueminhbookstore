@@ -110,8 +110,11 @@ const styles = theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         outline: 'none',
+        width: '100%',
+        float: 'right',
         [theme.breakpoints.down('md')]: {
-            width: '69%'
+            
+            
         }
     },
     btnOrder: {
@@ -133,11 +136,12 @@ const styles = theme => ({
         }
     },
     inputText: {
-        width: '250px',
+        width: '600px',
         marginBottom: '0px',
         marginRight: '0px',
         [theme.breakpoints.up('md')]: {
             marginRight: '50px',
+            width: '400px'
         }
     },
     typography: {

@@ -24,6 +24,7 @@ class SingleProduct extends Component {
     }
 
     render(){
+        const relateW = (this.props.site.products.length)/5+1;
         return(
             <div className="main-container col1-layout no-margin-top">
             <div className="single_product-tm">
@@ -222,8 +223,8 @@ class SingleProduct extends Component {
                                 <div className="col-lg-12 col-md-12 col-sm-12 fhs-full-p">
                                     <div id="tabcbs-recommendated-products" className="tab_content_recommendated-products" style={{minHeight: '400px'}}>
                                         <div className="bx-wrapper" style={{maxWidth: 'inherit'}}>
-                                            <div className="bx-viewport" aria-live="polite" style={{width: '100%', overflow: 'hidden', position: 'relative', height: '328px'}}>
-                                                <ul className="bxslider" style={{width: '60215%', position: 'relative', transitionDuration:'0s', transform: 'translate3d(0px, 0px, 0px)'}}>
+                                            <div className="bx-viewport" aria-live="polite" style={{width: '100%', overflow: 'auto', position: 'relative', height: '328px'}}>
+                                                <ul className="bxslider" style={{width: `${relateW}*100%`, position: 'relative', transitionDuration:'0s', transform: 'translate3d(0px, 0px, 0px)'}}>
                                                 {this.props.site.products.map((product, i) => {
                                                     return(
                                                         <ShopItems 
