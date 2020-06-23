@@ -51,17 +51,10 @@ class HomeShop extends Component {
                                 <ul className="bxslider">
                                         {homeshop.slice(0, 10).map((product, i) => {
                                             return(
-                                                <LazyLoad
-                                                    key={i}
-                                                    height={100}
-                                                    offset={[-100,100]}
-                                                    placeholder={<Loading />} 
-                                                >
                                                 <ShopItems
                                                     product={product}
                                                     key={i}
                                                 />
-                                                </LazyLoad>
                                             )
                                         })}
                                 </ul>
