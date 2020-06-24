@@ -325,7 +325,7 @@ class PageWrapper extends Component {
                         </div>
                         <div className={classes.buttonContact}>
                             <IconButton arial-label="" color="inherit">
-                                <Badge badgeContent="1" color="secondary" >
+                                <Badge badgeContent={this.props.site.addedProducts.length} color="secondary" >
                                         <ShoppingCart fontSize="large" onClick={this.toggleDrawer} color ="primary" />
                                     
                                 </Badge>
