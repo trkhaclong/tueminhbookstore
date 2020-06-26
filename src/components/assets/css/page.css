@@ -26418,8 +26418,8 @@ li.d_2.fields div{
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 10px;
-    top: 250px;
+    right: -1px;
+    bottom: 0px;
     z-index: 1;
     
     font-size: 19px;
@@ -27159,8 +27159,8 @@ select::-ms-expand{
         height: 30px;
         position: absolute;
         z-index: 10;
-        left:-1px;
-        top:0px;         
+        right: -1px;
+        bottom: 0px;         
         color: transparent;
     }
     .bxslider.fhs-related-slider .label-pro-sale{
