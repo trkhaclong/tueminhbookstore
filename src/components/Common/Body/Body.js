@@ -19,7 +19,7 @@ import bannerimg from '../../assets/img/banner/banner0.png';
 
 import storeIcon from '../../assets/img/icons/store-icon.png';
 import saleIcon from '../../assets/img/icons/sale-icon.png';
-import facebookIcon from '../../assets/img/icons/facebook-icon.png';
+import ngontinhIcon from '../../assets/img/icons/ngontinh-icon.png';
 import searchIcon from '../../assets/img/icons/search-icon.png';
 import toyIcon from '../../assets/img/icons/toy-icon.png';
 import penIcon from '../../assets/img/icons/pen-icon.png';
@@ -48,8 +48,8 @@ const icons = [
     {img: storeIcon, caption: 'Cửa hàng', link: '/shop'},
     {img: saleIcon, caption: 'Sale', link: '/shop'},
     {img: searchIcon, caption: 'Gợi ý', link: '/shop'},
-    {img: facebookIcon, caption: 'facebook', link: '/'},
-    {img: toyIcon, caption: 'Đồ chơi', link: '/do-choi'},
+    {img: ngontinhIcon, caption: 'Ngôn tình', link: '/shop/sachtruyen/vanhoc/ngontinh'},
+    {img: toyIcon, caption: 'Đồ chơi', link: '/shop/dochoi'},
     {img: penIcon, caption: 'Văn phòng phẩm', link: '/shop/vanphongpham'},
     {img: bookIcon, caption: 'Văn học', link: '/shop/sachtruyen/vanhoc'},
     {img: childIcon, caption: 'Thiếu nhi', link: '/shop/sachtruyen/thieunhi'},
