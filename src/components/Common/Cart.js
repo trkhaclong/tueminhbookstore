@@ -189,7 +189,7 @@ class Cart extends Component {
             if(this.props.site.total > 0){
                 this.setState({open: true})
             } else {
-                this.setState({errtext: 'Giỏ hàng trống thì mua cái gì @@'})
+                this.setState({errtext: 'Giỏ hàng trống.'})
                 this.setState({openerr: true})
             }
         } else {
@@ -201,13 +201,7 @@ class Cart extends Component {
         if(this.props.values.address){
             if(this.props.values.phone){
                 this.setState({anchor: event.currentTarget})
-            } else {
-                this.setState({errtext: 'Không có sđt thì giao hàng kiểu gì @@'})
-                this.setState({openerr: true})
             }
-        } else {
-            this.setState({errtext: 'Không có địa chỉ thì giao đi đâu @@'})
-            this.setState({openerr: true})
         }
     }
     

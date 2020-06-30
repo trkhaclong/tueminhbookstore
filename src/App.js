@@ -10,6 +10,8 @@ import PageWrapper from './components/PageWrapper';
 
 import Footer from './components/Common/Footer';
 
+const Authors = loadable(() => import ('./components/Pages/Authors'))
+
 const ErPage = loadable(() => import('./components/Pages/ErPage'))
 
 const Home = loadable(() => import('./components/Pages/Home'))
@@ -45,139 +47,17 @@ class App extends Component {
   render(){
     return (
         <Router>
-
-          
-
-          <Route
-            path='/admin/users'
-            render={props => {
-              return(
-                <div>
-                {this.props.auth.token ?
-                  <AdminWrapper>
-                    <Users />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-              }
-              </div>
-              
-              )
-            }}
-          />
-          <Route
-            path='/admin/receipts'
-            render={props => {
-              return(
-                <div>
-                {this.props.auth.token ?
-                  <AdminWrapper>
-                    <Receipts />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-              }
-              </div>
-              
-              )
-            }}
-          />
-
-          <Route
-            path='/admin/products/:view/:id'
+          <Route 
             exact={true}
-            render={props => {
-              return (
-                <div>
-                  {this.props.auth.token ?
-                  <AdminWrapper>
-                    <AddProduct />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-                }
-                </div>
-              )
-            }}
+            path="/"
+            render={props => (
+              <PageWrapper>
+                <Home {...props} />
+                <Footer />
+              </PageWrapper>
+            )}
           />
 
-          <Route
-            path='/admin/products/:view'
-            exact={true}
-            render={props => {
-              return (
-                <div>
-                  {this.props.auth.token ?
-                  <AdminWrapper>
-                    <AddProduct />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-                }
-                </div>
-              )
-            }}
-          />
-          <Route
-            path='/admin/products'
-            exact={true}
-            render={props => {
-              return(
-                <div>
-                {this.props.auth.token ?
-                  <AdminWrapper>
-                    <Products />
-                  </AdminWrapper>
-                :
-                <PageWrapper>
-                  <LoginWrapper>
-                    <Login />
-                  </LoginWrapper>
-                </PageWrapper>
-              }
-              </div>
-              
-              )
-            }}
-          />
-
-          <Route
-            exact={true}
-            path="/admin"
-            render={props => {
-              return (
-                <div>
-                  {this.props.auth.token ?
-                    <AdminWrapper>
-                      <Dashboard />
-                    </AdminWrapper>
-                  :
-                  <PageWrapper>
-                    <LoginWrapper>
-                      <Login />
-                    </LoginWrapper>
-                  </PageWrapper>
-                  }
-                </div>
-              )
-            }}
-          />
           <Route
             exact={true}
             path="/login"
@@ -221,16 +101,138 @@ class App extends Component {
             }}
           />
 
-          <Route 
+          <Route
             exact={true}
-            path="/"
-            render={props => (
-              <PageWrapper>
-                <Home {...props} />
-                <Footer />
-              </PageWrapper>
-            )}
+            path="/admin"
+            render={props => {
+              return (
+                <div>
+                  {this.props.auth.token ?
+                    <AdminWrapper>
+                      <Dashboard />
+                    </AdminWrapper>
+                  :
+                  <PageWrapper>
+                    <LoginWrapper>
+                      <Login />
+                    </LoginWrapper>
+                  </PageWrapper>
+                  }
+                </div>
+              )
+            }}
           />
+          <Route
+            path='/admin/users'
+            render={props => {
+              return(
+                <div>
+                {this.props.auth.token ?
+                  <AdminWrapper>
+                    <Users />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+              }
+              </div>
+              
+              )
+            }}
+          />
+          <Route
+            path='/admin/receipts'
+            render={props => {
+              return(
+                <div>
+                {this.props.auth.token ?
+                  <AdminWrapper>
+                    <Receipts />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+              }
+              </div>
+              
+              )
+            }}
+          />
+          <Route
+            path='/admin/products'
+            exact={true}
+            render={props => {
+              return(
+                <div>
+                {this.props.auth.token ?
+                  <AdminWrapper>
+                    <Products />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+              }
+              </div>
+              
+              )
+            }}
+          />
+          <Route
+            path='/admin/products/:view/:id'
+            exact={true}
+            render={props => {
+              return (
+                <div>
+                  {this.props.auth.token ?
+                  <AdminWrapper>
+                    <AddProduct />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+                }
+                </div>
+              )
+            }}
+          />
+
+          <Route
+            path='/admin/products/:view'
+            exact={true}
+            render={props => {
+              return (
+                <div>
+                  {this.props.auth.token ?
+                  <AdminWrapper>
+                    <AddProduct />
+                  </AdminWrapper>
+                :
+                <PageWrapper>
+                  <LoginWrapper>
+                    <Login />
+                  </LoginWrapper>
+                </PageWrapper>
+                }
+                </div>
+              )
+            }}
+          />
+          
+
+          
+
 
           <Route 
             exact={true}
@@ -294,7 +296,18 @@ class App extends Component {
               </PageWrapper>
             )}
           />
-
+          
+          <Route
+            exact={true}
+            path="/author"
+            render={props => (
+              <PageWrapper>
+                <Authors />
+                <Footer />
+              </PageWrapper>
+            )}
+          />
+          
           <Route
             exact={true}
             path="/404"

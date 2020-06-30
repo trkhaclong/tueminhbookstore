@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as SiteActions from '../../store/actions/siteActions';
 
-
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 class ShopItems extends Component {

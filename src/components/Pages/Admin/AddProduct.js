@@ -52,9 +52,7 @@ const styles = theme => ({
 class AddProduct extends Component {
 
     componentDidUpdate(props, state){
-        if(this.props.match.params.view === 'add' && this.props.admin.products.filter(p => p.title === this.props.values.title).length >0){
-        }
-
+        
         if(this.props.admin.product.id !== props.admin.product.id){
             // when redux state changes product in admin reducer
             this.props.setValues(this.props.admin.product);
