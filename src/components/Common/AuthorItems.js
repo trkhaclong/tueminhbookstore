@@ -16,10 +16,11 @@ class AuthorItems extends Component {
             infinite: true,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll
+            slidesToScroll: 1,
         };
         return(
             <>
+            
                 <Slider {...settings}>
                     <div>
                         <h3>1</h3>
