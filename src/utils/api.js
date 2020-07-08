@@ -2,8 +2,8 @@ import axios from 'axios';
 
 let host;
 if(process.env.NODE_ENV === 'development'){
-    host = 'http://localhost:8080';
-
+    // host = 'http://localhost:8080';
+    host = 'http://128.199.85.250:8080';
 }else {
     host = 'http://128.199.85.250:8080';
 }
@@ -302,6 +302,9 @@ const API = {
         .then(res => {
             success(res);
         })
+    },
+    getAuthorItem: (success) => {
+        axios.get(`${host}/api/products`)
     }
 
 }

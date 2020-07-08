@@ -27285,9 +27285,17 @@ select::-ms-expand{
         width: 185px !important;
     }
 }
-@media (max-width: 390px) and (min-width: 350px){
+@media (max-width: 390px) and (min-width: 371px){
     .sl-width {
-        width: 137px !important;
+        width: 139px !important;
+    }
+    .tmshop .sl-width {
+        width: 175px !important;
+    }
+}
+@media (max-width: 370px) and (min-width: 351px){
+    .sl-width {
+        width: 133px !important;
     }
     .tmshop .sl-width {
         width: 175px !important;

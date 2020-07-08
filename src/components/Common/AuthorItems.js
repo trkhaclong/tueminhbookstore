@@ -8,40 +8,30 @@ import {connect} from 'react-redux';
 import * as SiteActions from '../../store/actions/siteActions';
 
 class AuthorItems extends Component {
+
+    componentDidMount
     
 
     render(){
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
         };
         return(
-            <>
+            <div>
             
                 <Slider {...settings}>
                     <div>
-                        <h3>1</h3>
+                        <h5>1</h5>
                     </div>
                     <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
+                        <h5>2</h5>
                     </div>
                 </Slider>
-            </>
+            </div>
         )
     }
 }
