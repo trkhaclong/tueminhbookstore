@@ -4,6 +4,9 @@ import {withRouter, Link} from 'react-router-dom';
 import * as SiteActions from '../../../store/actions/siteActions';
 import ShopItems from '../ShopItems';
 
+import {withStyles} from '@material-ui/core/styles';
+
+
 import '../../assets/css/blog.css';
 import LazyLoad from 'react-lazyload';
 
@@ -13,6 +16,82 @@ const Loading = () => (
     </div>
 )
 
+const styles = theme => ({
+    categorytab: {
+        border: 'none',
+        minHeight: '450px',
+        display: 'inline-block',
+        width: '100%',
+        background: 'white',
+        margin: '20px 0 0',
+    },
+    tabsliderHeader: {
+        minHeight: '45px',
+        borderBottom: '1px solid #ddd !important',
+        width: '100% !important',
+        position: 'relative',
+    },
+    tabsliderTitle: {
+        display: 'flex',
+        fontSize: '15px !important',
+        float: 'left',
+        paddingBottom: '5px',
+        paddingTop: '14px',
+        marginLeft: '13px',
+        color: '#000',
+        fontWeight: '500',
+        textTransform: 'uppercase',
+        fontFamily: '"Poppins", sans-serif',
+        textAlign: 'center',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '19px !important',
+        },
+    },
+    tabContainer: {
+        clear: 'both',
+        paddingTop: '10px',
+    },
+    tabcaphsCaphs: {
+        width: '100%',
+        float: 'left',
+        position: 'relative',
+        minHeight: '1px',
+        padding: '0px',
+    },
+    tabContent: {
+        minHeight: '400px',
+    },
+    bxWrapper: {
+        position: 'relative',
+        margin: '0 auto',
+        padding: '0',
+        zoom: '1',
+        maxWidth: '100% !important',
+        [theme.breakpoints.up('md')]: {
+            maxWidth: 'inherit',
+        },
+
+    },
+    bxViewport: {
+        width: '100%',
+        overflow: 'auto',
+        position: 'relative',
+        minHeight: '255px !important',
+        height: 'auto',
+    },
+    bxSlider: {
+        width: '1800px',
+        position: 'relative',
+        transform: 'translate3d(0px, 0px, 0px)',
+        paddingLeft: '0',
+        transformDuration: '0s',
+        [theme.breakpoints.up('sm')]: {
+            width: '100%',
+        },
+    },
+
+})
+
 class HomeShop extends Component {
 
     componentDidMount(){
@@ -20,7 +99,7 @@ class HomeShop extends Component {
     }
 
     render(){
-
+        const {classes} = this.props;
         const homeshop = this.props.site.products.filter(product => {
             if(this.props.type === 1)
                 return (product.category === this.props.cate)
@@ -36,19 +115,19 @@ class HomeShop extends Component {
 
         return(
             
-            <div id="categorytab-caphs" className="categorytab-slider fhs-grid">
+            <div id="categorytab-caphs" className={classes.categorytab}>
                 <div>
-                    <div className="tabslider-header">
-                        <div className="tabslider-title girdslider-title-aaa">
+                    <div className={classes.tabsliderHeader}>
+                        <div className={classes.tabsliderTitle}>
                             {this.props.name}
                         </div>
                     </div>
-                    <div className="tab_container">
-                        <div className="col-lg-12 col-md-12 col-sm-12 fhs-full-p">    
-                            <div className="tab_content_caphs" style={{minHeight: '400px'}}>
-                                <div className="bx-wrapper" style={{maxWidth: 'inherit'}}>
-                                <div className="bx-viewport" aria-live="polite" style={{width: '100%', overflow: 'hidden', position: 'relative'}}>
-                                <ul className="bxslider">
+                    <div className={classes.tabContainer}>
+                        <div id="tab" className={classes.tabcaphsCaphs}>    
+                            <div className={classes.tabContent}>
+                                <div className={classes.bxWrapper}>
+                                <div className={classes.bxViewport} aria-live="polite" >
+                                <ul className={classes.bxSlider}>
                                         {homeshop.slice(0, 10).map((product, i) => {
                                             return(
                                                 <ShopItems
@@ -84,4 +163,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(HomeShop));
+)(withStyles(styles)(HomeShop)));

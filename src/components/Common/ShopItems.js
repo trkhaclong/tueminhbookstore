@@ -4,7 +4,14 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as SiteActions from '../../store/actions/siteActions';
 
+import {withStyles} from '@material-ui/core/styles';
+
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
+
+const styles = theme => ({
+
+});
 
 class ShopItems extends Component {
     
@@ -12,7 +19,7 @@ class ShopItems extends Component {
     render(){
         return(
             
-                    <li className="item sl-width" aria-hidden="false" style={{float: 'left', listStyle: 'none', position: 'relative', width: '17%', height: '328px', marginLeft: '10px', marginRight: '10px'}}>
+                    <li className="item sl-width sl-margin" aria-hidden="false" >
                         <div className="item-inner" style={{position: 'relative'}}>
                             <div className="label-pro-sale">
                                 <div onClick={e => this.props.addToCart(this.props.product)} className="p-sale-label discount-1-fs" ><AddShoppingCartIcon style={{fontSize: '2em'}} /></div>
@@ -68,4 +75,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(ShopItems);
+)(withStyles(styles)(ShopItems));

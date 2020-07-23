@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .section-padding {
     padding: 80px;
 }
@@ -27350,12 +27353,32 @@ select::-ms-expand{
         font-size: 12px;
     }
 }
+@media (max-width: 1279px){
+    .sl-margin{
+        float: left;
+        list-style: none;
+        position: relative;
+        width: 17%;
+        height: 322px;
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+}
 @media (min-width: 1280px){
     .std .category-products .products-grid,.tabs-prod .category-products .products-grid{
         margin-left: 25px;
     }
     .bxslider.fhs-related-slider .label-pro-sale{
         top: 9px
+    }
+    .sl-margin{
+        float: left;
+        list-style: none;
+        position: relative;
+        width: 17%;
+        height: 322px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .sl-width{
         width: 175px !important;
@@ -29465,7 +29488,7 @@ span.m-selected-filter-item {
 .page-banner{
     padding-top: 20px;
 }
-.fhs-grid .bxslider h2.product-name{
+h2.product-name{
     max-height: 42px;
     min-height: 42px;
     overflow: hidden;
