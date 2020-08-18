@@ -150,7 +150,7 @@ class Footer extends Component {
 							<div className="row hidden-xs" style={{marginTop: '15px'}}>
 								<div className="col-sm-12 col-md-12 col-xs-12" style={{textAlign: 'center'}}>
 									<ul>
-										<li style={{color: '#adadad', paddingLeft: '14px'}}>Copyright ©2020 by Tran Khac Long. All Rights Reserved</li>
+										<li style={{color: '#adadad', paddingLeft: '14px'}}>Copyright ©2020 by Tran Khac Long.</li>
 									</ul>
 								</div>                
 							</div>

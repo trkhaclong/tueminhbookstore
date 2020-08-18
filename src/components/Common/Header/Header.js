@@ -162,7 +162,7 @@ class Header extends Component {
                             <div className="col-md-3 hidden-max-width-992">
                                 <div id="ves-verticalmenu" className="block block-success ves-verticalmenu highlighted hidden-sm offcanvas-actived">
                                     <div className="block-title hidden-xs hidden-sm">
-                                        <span>Danh muc san pham</span>
+                                        <span>Danh mục sản phẩm</span>
                                         <em className="shapes right"></em>
                                         <em className="line"></em>
                                     </div>

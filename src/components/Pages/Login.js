@@ -59,7 +59,7 @@ class Login extends Component {
                             <form onSubmit={e => {
                                 e.preventDefault();
                                 this.props.login(this.props.values.email, this.props.values.password);
-                            }} className="create-account-form" style={{display: 'block'}}>
+                            }} className="create-account-form" style={{display: 'block', backgroundColor: 'white'}}>
                                     <h2 className="heading-title">
                                         ĐĂNG NHẬP
                                     </h2>
@@ -100,7 +100,7 @@ class Login extends Component {
                             </form>
                             </div>
                             <div className="display-none col-md-6 col-sm-6">
-                                <form action="#" className="create-account-form" method="post" style={{display: 'block'}}>
+                                <form action="#" className="create-account-form" method="post" style={{display: 'block', backgroundColor: 'white'}}>
                                     <h2 className="heading-title">
                                         Đăng nhập với
                                     </h2>
@@ -108,7 +108,7 @@ class Login extends Component {
                                         <button className="btn-login facebook" onClick={() => this.props.authenticate("Facebook")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Log in with facebook
+                                                facebook
                                             </span>
                                         </button>
                                     </div>
@@ -116,15 +116,15 @@ class Login extends Component {
                                         <button style={{background: '#11d417'}} className="btn-login" onClick={() => this.props.authenticate("Github")}>
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Log in with Github
+                                                Github
                                             </span>
                                         </button>
                                     </div>
                                     <div className="col-md-12 submit" >					
-                                        <button style={{background: '#ffffff',paddingBottom: '30px'}} className="btn-login">
+                                        <button style={{background: '#cdc'}} className="btn-login">
                                             <span>
                                                 <i className="fa fa-user left"></i>
-                                                Log in with Zalo
+                                                Zalo
                                             </span>
                                         </button>
                                     </div>
