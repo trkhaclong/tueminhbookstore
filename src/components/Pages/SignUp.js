@@ -23,7 +23,7 @@ class SignUp extends Component {
                             <form onSubmit={e => {
                                 e.preventDefault();
                                 this.props.register(this.props.values.name, this.props.values.email, this.props.values.password);
-                            }} className="create-account-form" style={{display: 'block', minHeight: '500px'}}>
+                            }} className="create-account-form" style={{backgroundColor: 'white', display: 'block', minHeight: '500px'}}>
                                     <h2 className="heading-title">
                                         ĐĂNG KÍ
                                     </h2>

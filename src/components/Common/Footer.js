@@ -15,27 +15,6 @@ class Footer extends Component {
 					<div className="container">
 						<div className="container-inner">
 							<div className="row">
-								<div className="f-col f-col-2 col-sm-8 col-md-12 col-sms-12">
-									<div className="block-subscribe" style={{textAlign: 'center'}}>
-										<div style={{display: 'inline-block'}}>
-											<div className="subscribe-title">
-												<em className="fa fa-envelope-o fa-inverse" style={{fontSize:'20px'}}>&nbsp;</em>
-												<h3>Newsletter</h3>
-												<label htmlFor="newsletter">Đăng ký nhận bản tin</label>
-											</div>
-											<form method="post" id="newsletter-validate-detail">
-												<div className="subscribe-content">
-													<div className="actions" style={{display: 'block'}}>
-														<button type="submit" title="Đăng ký" className="button" ><span>Đăng ký</span></button>
-													</div>
-													<div className="input-box">
-														<input type="text" name="email" id="newsletter" title="Đăng ký nhận bản tin" className="input-text required-entry validate-email" placeholder="Nhập địa chỉ email của bạn"/>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
 								<div className="f-col f-col-1 col-sm-4 col-md-4 col-sms-12"></div>			
 							</div>
 						</div>

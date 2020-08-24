@@ -3,6 +3,7 @@ import ClearIcon from '@material-ui/icons/Clear';
 import API from '../../utils/api';
 import { connect } from 'react-redux';
 import * as SiteActions from '../../store/actions/siteActions';
+import {Link} from 'react-router-dom';
 
 class CartItems extends Component {
     render(){
@@ -10,10 +11,14 @@ class CartItems extends Component {
             <div className="shelf-item_tm" key={this.props.product.id}>
                 <ClearIcon onClick={e => this.props.removeProduct(this.props.product.id)} color="secondary" fontSize="large" className="shelf-item_del_tm"/>
                 <div className="shelf-item_thumb_tm">
-                    <img alt={this.props.product.name} src={API.makeFileURL(this.props.product.ProductImage[0].thumbail, null)} />
+                    <Link to={`/product/${this.props.product.id}`} onClick={e => this.props.setProductData(this.props.product)} title={this.props.product.name}>
+                        <img alt={this.props.product.name} src={API.makeFileURL(this.props.product.ProductImage[0].thumbail, null)} />
+                    </Link>
                 </div>
                 <div className="shelf-item_details_tm">
+                <Link to={`/product/${this.props.product.id}`} onClick={e => this.props.setProductData(this.props.product)} title={this.props.product.name}>
                    <p className="title_tm">{this.props.product.name}</p>
+                </Link>
                    <p className="desc_tm">
                         {this.props.product.publishing}
                         <br />
@@ -48,6 +53,9 @@ const mapDispatchToProps = dispatch => ({
     },
     subtractQuantity: (id) => {
         dispatch(SiteActions.subtractQuantity(id))
+    },
+    setProductData: (product) => {
+        dispatch(SiteActions.setProductData(product));
     }
 })
 
